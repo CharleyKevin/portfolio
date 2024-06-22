@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charley Kevin</title>
+
+    <link href="./output.css" rel="stylesheet">
+</head>
+<body class="w-full mx-auto">
+<header class="bg-black w-full flex justify-between py-3 px-20">
+    <div id="logo" class="w-28">
+        <img src="../assets/img/logo.png" alt="Charley Kevin">
+    </div>
+    <div id="menu">
+        <ul class="text-white flex gap-8 text-base text-md font-normal font-['Open Sans']">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#portfolio">Portfólio</a></li>
+            <li><a href="#about">Sobre</a></li>
+            <li><a href="#testimonial">Depoimentos</a></li>
+            <li><a href="#contact">Contato</a></li>
+        </ul>
+    </div>
+</header>
+<section id="banner" class="bg-black flex justify-between px-20 py-8">
+    <div id="left-banner" class="flex-auto flex flex-col items-start gap-6 pt-24">
+        <h1 class="text-white text-7xl font-semibold font-['Lora']">Olá, eu sou <br>Charley Kevin</h1>
+        <p class="text-white">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br>
+            Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+        <div id="actions-banner">
+            <button class="w-44 bg-yellow-400 text-black px-4 py-2 rounded-3xl mt-4">Saiba Mais</button>
+            <button class="w-44 ml-4 border border-yellow-400 text-yellow-400 px-4 py-2 rounded-3xl mt-4">Explorar
+                projetos
+            </button>
+        </div>
+    </div>
+    <div id="right-banner" class="flex items-start pr-8 relative">
+        <img src="../assets/img/image_banner.png" alt="Banner">
+        <div class="h-32 p-6 mt-24 -ml-24 absolute bg-zinc-800 rounded-2xl shadow justify-center items-center gap-2 inline-flex">
+            <div class="flex-col justify-start items-start gap-3.5 inline-flex">
+                <div class="w-20 h-8 relative">
+                    <img class="w-8 h-8 left-0 top-0 absolute rounded-full border-2 border-white"
+                         src="https://via.placeholder.com/32x32"/>
+                    <img class="w-8 h-8 left-[21px] top-0 absolute rounded-full border-2 border-white"
+                         src="https://via.placeholder.com/32x32"/>
+                    <img class="w-8 h-8 left-[42px] top-0 absolute rounded-full border-2 border-white"
+                         src="https://via.placeholder.com/32x32"/>
+                </div>
+                <div class="w-24 text-white text-base font-semibold font-['Open Sans']">200+ clients Happy</div>
+            </div>
+        </div>
+        <div class="h-16 p-4 mt-80 right-0 -mr-10 absolute bg-zinc-800 rounded-2xl shadow justify-center items-center gap-2 inline-flex">
+            <div class="w-8 h-8 relative">
+                <div class="w-8 h-8 left-0 top-0 absolute bg-blue-500 rounded-full"></div>
+            </div>
+            <div class="w-28 text-white text-base font-semibold font-['Open Sans']">Developer</div>
+        </div>
+        <div class="h-20 px-6 py-4 bottom-0 mb-16 -ml-24 absolute bg-zinc-800 rounded-2xl shadow justify-center items-center gap-2 inline-flex">
+            <div class="text-white text-3xl font-semibold font-['Lora']">05</div>
+            <div class="w-28 text-white text-base font-semibold font-['Open Sans']">Years of Experience</div>
+        </div>
+    </div>
+</section>
+
+<section id="clients" class="bg-blue-500 h-36 px-20 flex items-center justify-around">
+    <img class="h-16 opacity-50" src="../assets/img/clients/paulo_picanco.png" alt="Paulo Picanco">
+    <img class="h-16 opacity-50" src="../assets/img/clients/wittel.png" alt="Wittel">
+    <img class="h-10 opacity-50" src="../assets/img/clients/index.png" alt="Index">
+    <img class="h-12 opacity-50" src="../assets/img/clients/tweex.png" alt="Tweex">
+</section>
+
+<section id="projects" class="relative bg-black px-20 py-8">
+    <div id="background-circle-blur-left"
+         class="z-0 absolute left-0 -top-2 w-1/4 h-[75%] bg-[#4269F6] rounded-r-full opacity-75 blur-3xl"></div>
+    <div id="title-projects" class="relative z-10 text-white font-['Lora'] flex justify-between items-center">
+        <div class="basis-1/4">
+            <p class="text-3xl font-bold">Casos de sucesso</p>
+            <p class="text-xl font-bold">Soluções personalizadas</p>
+        </div>
+        <div class="basis-2/4">
+            <p class="text-md font-['Open Sans']">Destacamos alguns dos nossos projetos mais bem-sucedidos. Explore
+                nossas histórias de sucesso e veja como ajudamos empresas de diversos setores a alcançar seus objetivos
+                e superar desafios.</p>
+        </div>
+    </div>
+    <div id="carrossel-projects" class="relative z-10 flex gap-4 mt-8 overflow-x-scroll scrollbar-thin scrollbar-thumb-slate-700 scrollbar-track-slate-300 pb-4 text-white">
+        <div class="min-w-[515px] w-[515px]">
+            <img src="../assets/img/projects/image.png" class="w-[515px] rounded-2xl shadow">
+            <h2 class="font-['Lora'] text-xl pt-2">Tennis Company</h2>
+            <p>Desenvolvimento de um sistema de gerenciamento de torneios de tênis.</p>
+        </div>
+        <div class="min-w-[515px] w-[515px]">
+            <img src="../assets/img/projects/image.png" class="w-[515px] rounded-2xl shadow">
+            <h2 class="font-['Lora'] text-xl pt-2">Tennis Company</h2>
+            <p>Desenvolvimento de um sistema de gerenciamento de torneios de tênis.</p>
+        </div>
+        <div class="min-w-[515px] w-[515px]">
+            <img src="../assets/img/projects/image.png" class="w-[515px] rounded-2xl shadow">
+            <h2 class="font-['Lora'] text-xl pt-2">Tennis Company</h2>
+            <p>Desenvolvimento de um sistema de gerenciamento de torneios de tênis.</p>
+        </div>
+        <div class="min-w-[515px] w-[515px]">
+            <img src="../assets/img/projects/image.png" class="w-[515px] rounded-2xl shadow">
+            <h2 class="font-['Lora'] text-xl py-2">Tennis Company</h2>
+            <p>Desenvolvimento de um sistema de gerenciamento de torneios de tênis.</p>
+        </div>
+        <div class="min-w-[515px] w-[515px]">
+            <img src="../assets/img/projects/image.png" class="w-[515px] rounded-2xl shadow">
+        </div>
+    </div>
+</section>
+
+<section id="about-me" class="relative z-10 bg-zinc-800 text-white">
+    <div id=title-about-me" class="flex flex-col items-center pt-8 pb-4">
+        <h4 class="font-['Lora'] text-4xl">Sobre mim</h4>
+        <p class="text-md font-['Open Sans']">Conheça um pouco mais sobre mim e minha trajetória profissional.</p>
+        <a href="../assets/pdf/Charley-Kevin-Web-Developer.pdf"
+           target="_blank" rel="noopener noreferrer"
+           class="w-44 bg-yellow-400 text-black px-4 py-2 rounded-3xl mt-4 text-center"
+        >
+            Download CV
+        </a>
+    </div>
+
+    <div id="content-about-me" class="w-full flex px-20 py-8 h-[210px]">
+        <ul class="w-full flex flex-wrap justify-around text-center font-['Lora'] font-normal text-lg">
+            <li class="w-1/3">
+                <input class="peer sr-only" type="radio" value="yes" name="answer" id="yes"/>
+                <label class="p-4 w-full hover:text-yellow-400 hover:border-b hover:border-yellow-400 inline-block cursor-pointer peer-checked:text-yellow-400 peer-checked:border-b peer-checked:border-yellow-400 transition-all duration-500 ease-in-out"
+                       for="yes">Skils</label>
+                <div class="left-0 p-6 transition-all duration-500 ease-in-out translate-x-full opacity-0 invisible peer-checked:absolute peer-checked:w-full peer-checked:opacity-100 peer-checked:visible peer-checked:translate-x-0">
+                    <div class="border-b border-white">
+                        Details
+                    </div>
+                </div>
+            </li>
+            <li class="w-1/3">
+                <input class="peer sr-only" type="radio" value="no" name="answer" id="no" checked/>
+                <label class="p-4 w-full hover:text-yellow-400 hover:border-b hover:border-yellow-400 inline-block cursor-pointer peer-checked:text-yellow-400 peer-checked:border-b peer-checked:border-yellow-400 transition-all duration-500 ease-in-out"
+                       for="no">Experiência</label>
+                <div class="left-0 p-6 transition-all duration-500 ease-in-out translate-x-full opacity-0 invisible peer-checked:absolute peer-checked:w-full peer-checked:opacity-100 peer-checked:visible peer-checked:translate-x-0">
+                    <div class="border-b border-white">
+                        Experience
+                    </div>
+                </div>
+            </li>
+            <li class="w-1/3">
+                <input class="peer sr-only" type="radio" value="yesno" name="answer" id="yesno"/>
+                <label class="p-4 w-full hover:text-yellow-400 hover:border-b hover:border-yellow-400 inline-block cursor-pointer peer-checked:text-yellow-400 peer-checked:border-b peer-checked:border-yellow-400 transition-all duration-500 ease-in-out"
+                       for="yesno">Educação</label>
+                <div class="left-0 p-6 w-1 transition-all duration-500 ease-in-out translate-x-full opacity-0 invisible peer-checked:absolute peer-checked:w-full peer-checked:opacity-100 peer-checked:visible peer-checked:translate-x-0">
+                    <div class="border-b border-white">
+                        Education
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<section id="testimonial" class="relative bg-black px-20 py-8">
+    <div id="title-testimonial" class="flex justify-center">
+        <h1 class="font-['Lora'] font-semibold text-white text-4xl">O que é falado ?</h1>
+    </div>
+    <div id="description-testimonial" class="relative z-10 flex justify-start">
+        <img src="../assets/img/testimonials/testimonial_1.png" class="w-1/4">
+        <div class="w-3/4 pl-12 pr-8 flex flex-col justify-center text-white">
+            <p class="font-normal text-sm">Ac in enim sem elementum. Nisi, est a non libero interdum scelerisque neque,
+                penatibus. Vitae, aliquam venenatis ac porta et. Et eu, interdum elit donec sit sapien mi. Ipsum neque
+                nec pellentesque nullam habitant velit, in.</p>
+            <p class="mt-8 font-semibold text-md">Test</p>
+            <p class="mt-1 text-xs">Test</p>
+        </div>
+    </div>
+    <div id="background-circle-blur-right"
+         class="z-0 absolute right-0 -top-2 w-1/4 h-full bg-[#4269F6] rounded-l-full opacity-75 blur-3xl"></div>
+</section>
+
+<section id="contact" class="relative z-10 bg-zinc-800 px-20 py-8">
+    <div id="title-contact" class="flex justify-center">
+        <h1 class="font-['Lora'] font-semibold text-white text-4xl">Entre em contato</h1>
+    </div>
+    <div id="form-contact" class="flex justify-between mt-8 gap-2">
+        <div class="w-1/2">
+            <input type="text" class="w-full p-4 rounded-3xl" placeholder="Nome">
+            <input type="email" class="w-full p-4 mt-4 rounded-3xl" placeholder="E-mail">
+            <input type="text" class="w-full p-4 mt-4 rounded-3xl" placeholder="Assunto">
+        </div>
+        <div class="w-1/2">
+            <textarea class="w-full h-full p-4 rounded-3xl" placeholder="Mensagem"></textarea>
+        </div>
+    </div>
+    <div id="actions-contact" class="flex justify-end mt-8">
+        <button class="w-44 bg-yellow-400 text-black px-4 py-2 rounded-3xl">Enviar</button>
+    </div>
+</section>
+
+<footer class="bg-black">
+    <div class="relative text-white px-20 py-4 flex items-center">
+        <img src="../assets/img/logo.png" alt="Charley Kevin" class="flex-shrink-0 w-28">
+        <div class="absolute left-1/2 transform -translate-x-1/2 flex gap-2">
+            <a href="#" class="w-8 h-8 bg-yellow-400 rounded-full flex justify-center items-center">
+                <img src="../assets/img/socials/github.png" alt="Github">
+            </a>
+            <a href="#" class="w-8 h-8 bg-yellow-400 rounded-full flex justify-center items-center">
+                <img src="../assets/img/socials/linkedin.png" alt="Linkedin">
+            </a>
+        </div>
+        <p class="ml-auto flex-shrink-0">© 2024. Todos os direitos reservados.</p>
+    </div>
+</footer>
+
+
+</body>
+</html>
