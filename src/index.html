@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br" class="scroll-smooth">
+<html lang="pt-br" class="scroll-smooth overflow-x-hidden">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,633 +14,678 @@
         }
     </style>
 </head>
-<body class="w-full mx-auto overflow-x-hidden" x-data="{ modal1: false, modal2: false, modal3: false, modal4: false }">
-<header class="bg-black w-full flex max-sm:justify-center sm:justify-between py-3 px-20">
-    <div id="logo" class="w-28" data-aos="fade-right">
-        <img src="../assets/img/logo.png" alt="Charley Kevin">
-    </div>
-    <div class="max-sm:hidden" id="menu" data-aos="fade-left">
-        <ul class="text-white flex gap-8 text-base text-md font-normal font-['Open Sans']">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#projects">Portfólio</a></li>
-            <li><a href="#about-me">Sobre</a></li>
-            <li><a href="#contact">Contato</a></li>
-        </ul>
-    </div>
-</header>
-<section id="banner" class="bg-black flex justify-between px-20 py-8 overflow-x-hidden">
-    <div id="left-banner" class="flex-auto flex flex-col items-start gap-6 pt-2 sm:pt-24 pr-4 w-1/2" data-aos="fade-right">
-        <h1 class="text-white text-3xl sm:text-7xl font-semibold font-['Lora']">Olá, eu sou <br>Charley Kevin</h1>
-        <p class="text-white">Sou especialista em desenvolvimento de sistemas e soluções personalizadas. Tenho expertise na criação de bots inteligentes, desenvolvimento de sites em WordPress e integração de sistemas complexos.</p>
-        <p class="text-white">Utilizo tecnologias avançadas como <span class="text-yellow-400 italic">Laravel, Twilio e Filament</span> para garantir eficiência, escalabilidade e inovação em cada projeto.</p>
-        <p class="text-white">Se você busca um parceiro dedicado e comprometido com a excelência, estou pronto para transformar seu projeto em um verdadeiro sucesso.</p>
-        <div id="actions-banner">
-            <button class="w-44 bg-yellow-400 text-black px-4 py-2 rounded-3xl mt-4">
-                <a href="#about-me">Saiba Mais</a>
-            </button>
-            <button class="w-44 ml-4 border border-yellow-400 text-yellow-400 px-4 py-2 rounded-3xl mt-4">
-                <a href="#projects">Explorar projetos</a>
-            </button>
+<body class="w-full mx-auto overflow-x-hidden" x-data="body">
+    <header class="fixed top-0 h-[55px] bg-black w-full flex max-sm:justify-center sm:justify-between py-3 px-20 z-50
+        text-white">
+        <div id="logo" class="w-28" data-aos="fade-right">
+            <img src="../assets/img/logo.png" alt="Charley Kevin">
         </div>
-    </div>
-    <div id="right-banner" class="flex items-start pr-8 relative max-lg:hidden" data-aos="fade-left">
-        <img class="rounded-full" src="../assets/img/image_banner(2).webp" alt="Banner">
-        <div class="h-32 p-6 mt-24 -ml-24 absolute bg-zinc-800 rounded-2xl shadow justify-center items-center gap-2 inline-flex"
-             data-aos="fade-down-right"
-        >
-            <div class="flex-col justify-start items-start gap-3.5 inline-flex">
-                <div class="w-30 h-10 flex">
-                    <div class="w-10 h-10 flex items-center justify-center rounded-full bg-white">
-                        <img class="w-6" src="../assets/img/twilio.jpeg">
-                    </div>
-                    <div class="w-10 h-10 flex items-center justify-center -ml-2 rounded-full bg-[#FEBC69]">
-                        <img class="w-6" src="../assets/img/filament.png">
-                    </div>
-                    <div class="w-10 h-10 flex items-center justify-center -ml-2 rounded-full bg-white">
-                        <svg class="w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 52"><title>Logomark</title>
-                            <path d="M49.626 11.564a.809.809 0 0 1 .028.209v10.972a.8.8 0 0 1-.402.694l-9.209 5.302V39.25c0 .286-.152.55-.4.694L20.42 51.01c-.044.025-.092.041-.14.058-.018.006-.035.017-.054.022a.805.805 0 0 1-.41 0c-.022-.006-.042-.018-.063-.026-.044-.016-.09-.03-.132-.054L.402 39.944A.801.801 0 0 1 0 39.25V6.334c0-.072.01-.142.028-.21.006-.023.02-.044.028-.067.015-.042.029-.085.051-.124.015-.026.037-.047.055-.071.023-.032.044-.065.071-.093.023-.023.053-.04.079-.06.029-.024.055-.05.088-.069h.001l9.61-5.533a.802.802 0 0 1 .8 0l9.61 5.533h.002c.032.02.059.045.088.068.026.02.055.038.078.06.028.029.048.062.072.094.017.024.04.045.054.071.023.04.036.082.052.124.008.023.022.044.028.068a.809.809 0 0 1 .028.209v20.559l8.008-4.611v-10.51c0-.07.01-.141.028-.208.007-.024.02-.045.028-.068.016-.042.03-.085.052-.124.015-.026.037-.047.054-.071.024-.032.044-.065.072-.093.023-.023.052-.04.078-.06.03-.024.056-.05.088-.069h.001l9.611-5.533a.801.801 0 0 1 .8 0l9.61 5.533c.034.02.06.045.09.068.025.02.054.038.077.06.028.029.048.062.072.094.018.024.04.045.054.071.023.039.036.082.052.124.009.023.022.044.028.068zm-1.574 10.718v-9.124l-3.363 1.936-4.646 2.675v9.124l8.01-4.611zm-9.61 16.505v-9.13l-4.57 2.61-13.05 7.448v9.216l17.62-10.144zM1.602 7.719v31.068L19.22 48.93v-9.214l-9.204-5.209-.003-.002-.004-.002c-.031-.018-.057-.044-.086-.066-.025-.02-.054-.036-.076-.058l-.002-.003c-.026-.025-.044-.056-.066-.084-.02-.027-.044-.05-.06-.078l-.001-.003c-.018-.03-.029-.066-.042-.1-.013-.03-.03-.058-.038-.09v-.001c-.01-.038-.012-.078-.016-.117-.004-.03-.012-.06-.012-.09v-.002-21.481L4.965 9.654 1.602 7.72zm8.81-5.994L2.405 6.334l8.005 4.609 8.006-4.61-8.006-4.608zm4.164 28.764l4.645-2.674V7.719l-3.363 1.936-4.646 2.675v20.096l3.364-1.937zM39.243 7.164l-8.006 4.609 8.006 4.609 8.005-4.61-8.005-4.608zm-.801 10.605l-4.646-2.675-3.363-1.936v9.124l4.645 2.674 3.364 1.937v-9.124zM20.02 38.33l11.743-6.704 5.87-3.35-8-4.606-9.211 5.303-8.395 4.833 7.993 4.524z"
-                                  fill="#FF2D20" fill-rule="evenodd"/>
-                        </svg>
-                    </div>
-                </div>
-                <div class="w-24 text-white text-base font-semibold font-['Open Sans'] text-center">Desenvolvedor de
-                    Sistemas
-                </div>
+        <div class="max-sm:hidden" id="menu" data-aos="fade-left">
+            <ul class="text-white flex gap-8 text-base text-md font-normal font-['Open Sans']">
+                <li class="hover:text-yellow-400 hover:border-b hover:border-b-yellow-400">
+                    <a href="#banner" @click.prevent="scrollTo('#banner')">Home</a>
+                </li>
+                <li class="hover:text-yellow-400 hover:border-b hover:border-b-yellow-400">
+                    <a href="#projects" @click.prevent="scrollTo('#projects')">Portfólio</a>
+                </li>
+                <li class="hover:text-yellow-400 hover:border-b hover:border-b-yellow-400">
+                    <a href="#about-me" @click.prevent="scrollTo('#about-me')">Sobre</a>
+                </li>
+                <li class="hover:text-yellow-400 hover:border-b hover:border-b-yellow-400">
+                    <a href="#contact" @click.prevent="scrollTo('#contact')">Contato</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <section id="banner" class="mt-[55px] bg-black flex justify-between px-5 sm:px-20 py-8 overflow-x-hidden">
+        <div id="left-banner" class="flex-auto flex flex-col items-start gap-6 pt-2 sm:pt-24 pr-4 w-1/2" data-aos="fade-right">
+            <h1 class="text-white text-3xl sm:text-7xl font-semibold font-['Lora']">Olá, eu sou <br>Charley Kevin</h1>
+            <p class="text-white text-sm">Sou especialista em desenvolvimento de sistemas e soluções personalizadas. Tenho expertise na criação de bots inteligentes, desenvolvimento de sites em WordPress e integração de sistemas complexos.</p>
+            <p class="text-white text-sm">Utilizo tecnologias avançadas como <span class="text-yellow-400 italic">Laravel, Twilio e Filament</span> para garantir eficiência, escalabilidade e inovação em cada projeto.</p>
+            <p class="text-white text-sm">Se você busca um parceiro dedicado e comprometido com a excelência, estou pronto para transformar seu projeto em um verdadeiro sucesso.</p>
+            <div id="actions-banner">
+                <button class="max-sm:40 sm:w-44 bg-yellow-400 text-black px-4 py-2 rounded-3xl mt-4">
+                    <a href="#about-me">Saiba Mais</a>
+                </button>
+                <button class="max-sm:40 sm:w-44 ml-4 border border-yellow-400 text-yellow-400 px-4 py-2 rounded-3xl mt-4">
+                    <a href="#projects">Explorar projetos</a>
+                </button>
             </div>
         </div>
-        <div class="h-16 p-4 mt-80 right-0 -mr-10 absolute bg-zinc-800 rounded-2xl shadow justify-center items-center gap-2 inline-flex"
-             data-aos="fade-up-left"
-        >
-            <div class="w-28 text-white text-base font-semibold font-['Open Sans'] text-center">Customização de SAAS
+        <div id="right-banner" class="flex items-start pr-8 relative max-lg:hidden" data-aos="fade-left">
+            <img class="rounded-full" src="../assets/img/image_banner(2).webp" alt="Banner">
+            <div class="h-32 p-6 mt-24 -ml-24 absolute bg-zinc-800 rounded-2xl shadow justify-center items-center gap-2 inline-flex"
+                 data-aos="fade-down-right"
+            >
+                <div class="flex-col justify-start items-start gap-3.5 inline-flex">
+                    <div class="w-30 h-10 flex">
+                        <div class="w-10 h-10 flex items-center justify-center rounded-full bg-white">
+                            <img class="w-6" src="../assets/img/twilio.jpeg">
+                        </div>
+                        <div class="w-10 h-10 flex items-center justify-center -ml-2 rounded-full bg-[#FEBC69]">
+                            <img class="w-6" src="../assets/img/filament.png">
+                        </div>
+                        <div class="w-10 h-10 flex items-center justify-center -ml-2 rounded-full bg-white">
+                            <svg class="w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 52"><title>Logomark</title>
+                                <path d="M49.626 11.564a.809.809 0 0 1 .028.209v10.972a.8.8 0 0 1-.402.694l-9.209 5.302V39.25c0 .286-.152.55-.4.694L20.42 51.01c-.044.025-.092.041-.14.058-.018.006-.035.017-.054.022a.805.805 0 0 1-.41 0c-.022-.006-.042-.018-.063-.026-.044-.016-.09-.03-.132-.054L.402 39.944A.801.801 0 0 1 0 39.25V6.334c0-.072.01-.142.028-.21.006-.023.02-.044.028-.067.015-.042.029-.085.051-.124.015-.026.037-.047.055-.071.023-.032.044-.065.071-.093.023-.023.053-.04.079-.06.029-.024.055-.05.088-.069h.001l9.61-5.533a.802.802 0 0 1 .8 0l9.61 5.533h.002c.032.02.059.045.088.068.026.02.055.038.078.06.028.029.048.062.072.094.017.024.04.045.054.071.023.04.036.082.052.124.008.023.022.044.028.068a.809.809 0 0 1 .028.209v20.559l8.008-4.611v-10.51c0-.07.01-.141.028-.208.007-.024.02-.045.028-.068.016-.042.03-.085.052-.124.015-.026.037-.047.054-.071.024-.032.044-.065.072-.093.023-.023.052-.04.078-.06.03-.024.056-.05.088-.069h.001l9.611-5.533a.801.801 0 0 1 .8 0l9.61 5.533c.034.02.06.045.09.068.025.02.054.038.077.06.028.029.048.062.072.094.018.024.04.045.054.071.023.039.036.082.052.124.009.023.022.044.028.068zm-1.574 10.718v-9.124l-3.363 1.936-4.646 2.675v9.124l8.01-4.611zm-9.61 16.505v-9.13l-4.57 2.61-13.05 7.448v9.216l17.62-10.144zM1.602 7.719v31.068L19.22 48.93v-9.214l-9.204-5.209-.003-.002-.004-.002c-.031-.018-.057-.044-.086-.066-.025-.02-.054-.036-.076-.058l-.002-.003c-.026-.025-.044-.056-.066-.084-.02-.027-.044-.05-.06-.078l-.001-.003c-.018-.03-.029-.066-.042-.1-.013-.03-.03-.058-.038-.09v-.001c-.01-.038-.012-.078-.016-.117-.004-.03-.012-.06-.012-.09v-.002-21.481L4.965 9.654 1.602 7.72zm8.81-5.994L2.405 6.334l8.005 4.609 8.006-4.61-8.006-4.608zm4.164 28.764l4.645-2.674V7.719l-3.363 1.936-4.646 2.675v20.096l3.364-1.937zM39.243 7.164l-8.006 4.609 8.006 4.609 8.005-4.61-8.005-4.608zm-.801 10.605l-4.646-2.675-3.363-1.936v9.124l4.645 2.674 3.364 1.937v-9.124zM20.02 38.33l11.743-6.704 5.87-3.35-8-4.606-9.211 5.303-8.395 4.833 7.993 4.524z"
+                                      fill="#FF2D20" fill-rule="evenodd"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="w-24 text-white text-base font-semibold font-['Open Sans'] text-center">Desenvolvedor de
+                        Sistemas
+                    </div>
+                </div>
+            </div>
+            <div class="h-16 p-4 mt-80 right-0 -mr-10 absolute bg-zinc-800 rounded-2xl shadow justify-center items-center gap-2 inline-flex"
+                 data-aos="fade-up-left"
+            >
+                <div class="w-28 text-white text-base font-semibold font-['Open Sans'] text-center">Customização de SAAS
+                </div>
+            </div>
+            <div class="h-20 px-6 py-4 bottom-0 mb-8 -ml-24 absolute bg-zinc-800 rounded-2xl shadow justify-center items-center gap-2 inline-flex"
+                 data-aos="fade-up-right"
+            >
+                <div class="text-white text-3xl font-semibold font-['Lora']">05</div>
+                <div class="w-28 text-white text-base font-semibold font-['Open Sans']">Anos de Experiência</div>
             </div>
         </div>
-        <div class="h-20 px-6 py-4 bottom-0 mb-8 -ml-24 absolute bg-zinc-800 rounded-2xl shadow justify-center items-center gap-2 inline-flex"
-             data-aos="fade-up-right"
-        >
-            <div class="text-white text-3xl font-semibold font-['Lora']">05</div>
-            <div class="w-28 text-white text-base font-semibold font-['Open Sans']">Anos de Experiência</div>
-        </div>
-    </div>
-</section>
+    </section>
 
-<section id="clients" class="bg-blue-500 overflow-x-hidden logos" data-speed="fast">
-    <div class="h-36 flex items-center justify-start gap-8 w-max logos-slide overflow-x-hidden" data-aos="fade-left">
-        <img class="h-16 opacity-50" src="../assets/img/clients/paulo_picanco.png" alt="Paulo Picanco">
-        <img class="h-16 opacity-50" src="../assets/img/clients/wittel.png" alt="Wittel">
-        <img class="h-10 opacity-50" src="../assets/img/clients/index.png" alt="Index">
-        <img class="h-12 opacity-50" src="../assets/img/clients/tweex.png" alt="Tweex">
-        <img class="h-12 opacity-50" src="../assets/img/clients/hollerly.png" alt="Hollerly">
-        <img class="h-16 opacity-50" src="../assets/img/clients/paulo_picanco.png" alt="Paulo Picanco">
-        <img class="h-16 opacity-50" src="../assets/img/clients/wittel.png" alt="Wittel">
-        <img class="h-10 opacity-50" src="../assets/img/clients/index.png" alt="Index">
-        <img class="h-12 opacity-50" src="../assets/img/clients/tweex.png" alt="Tweex">
-        <img class="h-12 opacity-50" src="../assets/img/clients/hollerly.png" alt="Hollerly">
-        <img class="h-16 opacity-50" src="../assets/img/clients/paulo_picanco.png" alt="Paulo Picanco">
-        <img class="h-16 opacity-50" src="../assets/img/clients/wittel.png" alt="Wittel">
-        <img class="h-10 opacity-50" src="../assets/img/clients/index.png" alt="Index">
-        <img class="h-12 opacity-50" src="../assets/img/clients/tweex.png" alt="Tweex">
-        <img class="h-12 opacity-50" src="../assets/img/clients/hollerly.png" alt="Hollerly">
-        <img class="h-16 opacity-50" src="../assets/img/clients/paulo_picanco.png" alt="Paulo Picanco">
-        <img class="h-16 opacity-50" src="../assets/img/clients/wittel.png" alt="Wittel">
-        <img class="h-10 opacity-50" src="../assets/img/clients/index.png" alt="Index">
-        <img class="h-12 opacity-50" src="../assets/img/clients/tweex.png" alt="Tweex">
-        <img class="h-12 opacity-50" src="../assets/img/clients/hollerly.png" alt="Hollerly">
-    </div>
-</section>
+    <section id="clients" class="bg-blue-500 overflow-x-hidden logos" data-speed="fast">
+        <div class="max-sm:h-16 sm:h-36 flex items-center justify-start gap-8 w-max logos-slide overflow-x-hidden" data-aos="fade-left">
+            <img class="max-sm:h-8 sm:h-16 opacity-50" src="../assets/img/clients/paulo_picanco.png" alt="Paulo Picanco">
+            <img class="max-sm:h-8 sm:h-16 opacity-50" src="../assets/img/clients/wittel.png" alt="Wittel">
+            <img class="max-sm:h-5 sm:h-10 opacity-50" src="../assets/img/clients/index.png" alt="Index">
+            <img class="max-sm:h-6 sm:h-12 opacity-50" src="../assets/img/clients/tweex.png" alt="Tweex">
+            <img class="max-sm:h-6 sm:h-12 opacity-50" src="../assets/img/clients/hollerly.png" alt="Hollerly">
+            <img class="max-sm:h-8 sm:h-16 opacity-50" src="../assets/img/clients/paulo_picanco.png" alt="Paulo Picanco">
+            <img class="max-sm:h-8 sm:h-16 opacity-50" src="../assets/img/clients/wittel.png" alt="Wittel">
+            <img class="max-sm:h-5 sm:h-10 opacity-50" src="../assets/img/clients/index.png" alt="Index">
+            <img class="max-sm:h-6 sm:h-12 opacity-50" src="../assets/img/clients/tweex.png" alt="Tweex">
+            <img class="max-sm:h-6 sm:h-12 opacity-50" src="../assets/img/clients/hollerly.png" alt="Hollerly">
+            <img class="max-sm:h-8 sm:h-16 opacity-50" src="../assets/img/clients/paulo_picanco.png" alt="Paulo Picanco">
+            <img class="max-sm:h-8 sm:h-16 opacity-50" src="../assets/img/clients/wittel.png" alt="Wittel">
+            <img class="max-sm:h-5 sm:h-10 opacity-50" src="../assets/img/clients/index.png" alt="Index">
+            <img class="max-sm:h-6 sm:h-12 opacity-50" src="../assets/img/clients/tweex.png" alt="Tweex">
+            <img class="max-sm:h-6 sm:h-12 opacity-50" src="../assets/img/clients/hollerly.png" alt="Hollerly">
+            <img class="max-sm:h-8 sm:h-16 opacity-50" src="../assets/img/clients/paulo_picanco.png" alt="Paulo Picanco">
+            <img class="max-sm:h-8 sm:h-16 opacity-50" src="../assets/img/clients/wittel.png" alt="Wittel">
+            <img class="max-sm:h-5 sm:h-10 opacity-50" src="../assets/img/clients/index.png" alt="Index">
+            <img class="max-sm:h-6 sm:h-12 opacity-50" src="../assets/img/clients/tweex.png" alt="Tweex">
+            <img class="max-sm:h-6 sm:h-12 opacity-50" src="../assets/img/clients/hollerly.png" alt="Hollerly">
+        </div>
+    </section>
 
-<section id="projects" class="relative bg-black px-20 py-8 overflow-x-hidden" x-data="slider()">
-    <div id="background-circle-blur-left"
-         class="z-0 absolute left-0 -top-2 w-1/4 h-[75%] bg-[#4269F6] rounded-r-full opacity-75 blur-3xl"
-         data-aos="fade-left"
-    ></div>
-    <div id="title-projects" class="relative z-10 text-white font-['Lora'] flex justify-between items-center">
-        <div class="basis-1/4">
-            <p class="text-3xl font-bold">Casos de sucesso</p>
-            <p class="text-xl font-bold">Soluções personalizadas</p>
-        </div>
-        <div class="basis-2/4">
-            <p class="text-md font-['Open Sans']">Destacamos alguns dos nossos projetos mais bem-sucedidos. Explore
-                nossas histórias de sucesso e veja como ajudamos empresas de diversos setores a alcançar seus objetivos
-                e superar desafios.</p>
-        </div>
-    </div>
-    <div id="list-projects" class="relative">
-        <div id="carrossel-projects"
-             class="relative rounded-2xl z-10 flex gap-4 mt-8 overflow-x-scroll scroll-smooth scrollbar-thin scrollbar-thumb-slate-700 scrollbar-track-slate-300 pb-4 text-white"
-             x-ref="container" :class="{'has-no-scrollbar': hideScrollbar}"
+    <section id="projects" class="relative bg-black px-5 sm:px-20 py-8 overflow-x-hidden" x-data="slider()">
+        <div id="background-circle-blur-left"
+             class="z-0 absolute left-0 -top-2 w-1/4 h-[75%] bg-[#4269F6] rounded-r-full opacity-75 blur-3xl"
              data-aos="fade-left"
-        >
-            <div class="min-w-[515px] w-[515px] flex flex-col cursor-pointer" @click="modal1 = !modal1">
-                <h4 class="text-xl text-center font-semibold mb-2">Gerenciamento de campanhas Whatsapp (Twilio)</h4>
-                <div class="flex justify-center gap-2 mb-2">
-                    <h6 class="text-xs rounded-full bg-yellow-400 w-fit px-2 text-black">Twilio</h6>
-                    <h6 class="text-xs rounded-full bg-yellow-400 w-fit px-2 text-black">PHP</h6>
-                    <h6 class="text-xs rounded-full bg-yellow-400 w-fit px-2 text-black">Filament</h6>
-                    <h6 class="text-xs rounded-full bg-yellow-400 w-fit px-2 text-black">Componentes customizados</h6>
+        ></div>
+        <div id="title-projects" class="relative z-10 text-white font-['Lora'] flex max-sm:flex-col max-sm:justify-center
+            justify-between items-center">
+            <div class="max-sm:text-center max-sm:mb-2 basis-1/4">
+                <p class="max-sm:text-2xl text-3xl font-bold">Casos de sucesso</p>
+                <p class="max-sm:text-sm text-xl font-bold">Soluções personalizadas</p>
+            </div>
+            <div class="basis-2/4">
+                <p class="max-sm:text-sm sm:text-md font-['Open Sans']">Destacamos alguns dos nossos projetos mais bem-sucedidos. Explore
+                    nossas histórias de sucesso e veja como ajudamos empresas de diversos setores a alcançar seus objetivos
+                    e superar desafios.</p>
+            </div>
+        </div>
+        <div id="list-projects" class="relative">
+            <div id="carrossel-projects"
+                 class="relative rounded-2xl z-10 flex gap-4 mt-8 overflow-x-scroll scroll-smooth scrollbar-thin scrollbar-thumb-slate-700 scrollbar-track-slate-300 pb-4 text-white"
+                 x-ref="container" :class="{'has-no-scrollbar': hideScrollbar}"
+                 data-aos="fade-left"
+            >
+                <div class="max-sm:min-w-[300px] sm:min-w-[515px] sm:w-[515px] flex flex-col cursor-pointer" @click="modal1 = !modal1">
+                    <h4 class="text-xl text-center font-semibold mb-2">Gerenciamento de campanhas Whatsapp (Twilio)</h4>
+                    <div class="flex justify-center items-center gap-2 mb-2">
+                        <h6 class="text-xs rounded-full bg-yellow-400 w-fit px-2 text-black">Twilio</h6>
+                        <h6 class="text-xs rounded-full bg-yellow-400 w-fit px-2 text-black">PHP</h6>
+                        <h6 class="text-xs rounded-full bg-yellow-400 w-fit px-2 text-black">Filament</h6>
+                        <h6 class="max-sm:hidden text-xs rounded-full bg-yellow-400 w-fit px-2 text-black">Componentes customizados</h6>
+                    </div>
+                    <img src="../assets/img/projects/campanhas_whatsapp.png" class="max-sm:w-[300px] max-sm:h-[225px] sm:w-[515px] sm:h-[463px] rounded-2xl shadow">
+                    <button class="mt-2 self-center flex items-center gap-2 h-8 w-8 shadow-lg text-md rounded-full bg-yellow-500 hover:bg-yellow-400 w-fit px-2 mr-2 text-black -translate-y-14">
+                        <span class="text-sm">Ver mais</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                             stroke="black" class="size-5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"/>
+                        </svg>
+                    </button>
                 </div>
-                <img src="../assets/img/projects/campanhas_whatsapp.png" class="w-[515px] h-[463px] rounded-2xl shadow">
-                <button class="mt-2 self-center flex items-center gap-2 h-8 w-8 shadow-lg text-md rounded-full bg-yellow-500 hover:bg-yellow-400 w-fit px-2 mr-2 text-black -translate-y-14">
-                    <span class="text-sm">Ver mais</span>
+                <div class="max-sm:min-w-[300px] sm:min-w-[515px] sm:w-[515px] flex flex-col cursor-pointer" @click="modal2 = !modal2">
+                    <h4 class="text-xl text-center font-semibold mb-2">Conectando Clientes e Influenciadores</h4>
+                    <div class="flex justify-center gap-2 mb-2">
+                        <h6 class="text-xs rounded-full bg-yellow-400 w-fit px-2 text-black">
+                            <span class="max-sm:hidden">Frontend - </span>ReactJs
+                        </h6>
+                        <h6 class="text-xs rounded-full bg-yellow-400 w-fit px-2 text-black">
+                            <span class="max-sm:hidden">Backend - </span>PHP
+                        </h6>
+                        <h6 class="text-xs rounded-full bg-yellow-400 w-fit px-2 text-black">
+                            Customização<span class="max-sm:hidden"> em software adquirido</span>
+                        </h6>
+                    </div>
+                    <img src="../assets/img/projects/hollerly.jpeg" class="max-sm:w-[300px] max-sm:h-[225px] sm:w-[515px] sm:h-[463px] rounded-2xl shadow">
+                    <button class="mt-2 self-center flex items-center gap-2 h-8 w-8 shadow-lg text-md rounded-full bg-yellow-500 hover:bg-yellow-400 w-fit px-2 mr-2 text-black -translate-y-14">
+                        <span class="text-sm">Ver mais</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                             stroke="black" class="size-5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="max-sm:min-w-[300px] sm:min-w-[515px] sm:w-[515px] flex flex-col cursor-pointer" @click="modal3 = !modal3">
+                    <h4 class="text-xl text-center font-semibold mb-2">Transformação de Site WordPress com Filament</h4>
+                    <div class="flex justify-center gap-2 mb-2">
+                        <h6 class="text-xs rounded-full bg-yellow-400 w-fit px-2 text-black">Tailwind</h6>
+                        <h6 class="text-xs rounded-full bg-yellow-400 w-fit px-2 text-black">Filament</h6>
+                        <h6 class="text-xs rounded-full bg-yellow-400 w-fit px-2 text-black">
+                            UX<span class="max-sm:hidden"> Melhorada</span>
+                        </h6>
+                        <h6 class="text-xs rounded-full bg-yellow-400 w-fit px-2 text-black">
+                            Customização <span class="max-sm:hidden"> em site Wordpress</span>
+                        </h6>
+                    </div>
+                    <img src="../assets/img/projects/grau_academico.jpeg" class="max-sm:w-[300px] max-sm:h-[225px] sm:w-[515px] sm:h-[463px] rounded-2xl shadow">
+                    <button class="mt-2 self-center flex items-center gap-2 h-8 w-8 shadow-lg text-md rounded-full bg-yellow-500 hover:bg-yellow-400 w-fit px-2 mr-2 text-black -translate-y-14">
+                        <span class="text-sm">Ver mais</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                             stroke="black" class="size-5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="max-sm:min-w-[300px] sm:min-w-[515px] sm:w-[515px] flex flex-col cursor-pointer" @click="modal4 = !modal4">
+                    <h4 class="text-xl text-center font-semibold mb-2">Integração Avançada entre CRM Totvs e Wake</h4>
+                    <div class="flex justify-center gap-2 mb-2">
+                        <h6 class="text-xs rounded-full bg-yellow-400 w-fit px-2 text-black">
+                            Integração<span class="max-sm:hidden"> Totvs com Wake</span>
+                        </h6>
+                        <h6 class="text-xs rounded-full bg-yellow-400 w-fit px-2 text-black">Filament</h6>
+                        <h6 class="text-xs rounded-full bg-yellow-400 w-fit px-2 text-black">Laravel</h6>
+                        <h6 class="text-xs rounded-full bg-yellow-400 w-fit px-2 text-black">
+                            Automatização<span class="max-sm:hidden"> de Pedidos</span>
+                        </h6>
+                    </div>
+                    <img src="../assets/img/projects/livrosescolares.jpeg" class="max-sm:w-[300px] max-sm:h-[225px] sm:w-[515px] sm:h-[463px] rounded-2xl shadow">
+                    <button class="mt-2 self-center flex items-center gap-2 h-8 w-8 shadow-lg text-md rounded-full bg-yellow-500 hover:bg-yellow-400 w-fit px-2 mr-2 text-black -translate-y-14">
+                        <span class="text-sm">Ver mais</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                             stroke="black" class="size-5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div class="max-sm:hidden absolute z-10 bottom-1/2 transform -translate-x-1/2 left-0 w-10 h-10 bg-yellow-700 rounded-full
+            flex justify-center items-center cursor-pointer hover:bg-yellow-400 hover:text-black" x-cloak @click="prev($refs.container)">
+                <button class="button is-info">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                         stroke="black" class="size-5">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"/>
+                         stroke="black"
+                         class="size-5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5"/>
                     </svg>
                 </button>
             </div>
-            <div class="min-w-[515px] w-[515px] flex flex-col cursor-pointer" @click="modal2 = !modal2">
-                <h4 class="text-xl text-center font-semibold mb-2">Conectando Clientes e Influenciadores</h4>
-                <div class="flex justify-center gap-2 mb-2">
-                    <h6 class="text-xs rounded-full bg-yellow-400 w-fit px-2 text-black">Frontend - ReactJs</h6>
-                    <h6 class="text-xs rounded-full bg-yellow-400 w-fit px-2 text-black">Backend - PHP</h6>
-                    <h6 class="text-xs rounded-full bg-yellow-400 w-fit px-2 text-black">Customização em software
-                        adquirido</h6>
-                </div>
-                <img src="../assets/img/projects/hollerly.jpeg" class="w-[515px] h-[463px] rounded-2xl shadow">
-                <button class="mt-2 self-center flex items-center gap-2 h-8 w-8 shadow-lg text-md rounded-full bg-yellow-500 hover:bg-yellow-400 w-fit px-2 mr-2 text-black -translate-y-14">
-                    <span class="text-sm">Ver mais</span>
+
+            <div class="max-sm:hidden absolute z-10 bottom-1/2 transform translate-x-1/2 right-0 w-10 h-10 bg-yellow-700 rounded-full
+            flex justify-center items-center cursor-pointer hover:bg-yellow-400 hover:text-black" x-cloak @click="next($refs.container)">
+                <button class="button is-info">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                         stroke="black" class="size-5">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"/>
-                    </svg>
-                </button>
-            </div>
-            <div class="min-w-[515px] w-[515px] flex flex-col cursor-pointer" @click="modal3 = !modal3">
-                <h4 class="text-xl text-center font-semibold mb-2">Transformação de Site WordPress com Filament</h4>
-                <div class="flex justify-center gap-2 mb-2">
-                    <h6 class="text-xs rounded-full bg-yellow-400 w-fit px-2 text-black">Tailwind</h6>
-                    <h6 class="text-xs rounded-full bg-yellow-400 w-fit px-2 text-black">Filament</h6>
-                    <h6 class="text-xs rounded-full bg-yellow-400 w-fit px-2 text-black">UX Melhorada</h6>
-                    <h6 class="text-xs rounded-full bg-yellow-400 w-fit px-2 text-black">Customização em site
-                        Wordpress</h6>
-                </div>
-                <img src="../assets/img/projects/grau_academico.jpeg" class="w-[515px] h-[463px] rounded-2xl shadow">
-                <button class="mt-2 self-center flex items-center gap-2 h-8 w-8 shadow-lg text-md rounded-full bg-yellow-500 hover:bg-yellow-400 w-fit px-2 mr-2 text-black -translate-y-14">
-                    <span class="text-sm">Ver mais</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                         stroke="black" class="size-5">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"/>
-                    </svg>
-                </button>
-            </div>
-            <div class="min-w-[515px] w-[515px] flex flex-col cursor-pointer" @click="modal4 = !modal4">
-                <h4 class="text-xl text-center font-semibold mb-2">Integração Avançada entre CRM Totvs e Wake</h4>
-                <div class="flex justify-center gap-2 mb-2">
-                    <h6 class="text-xs rounded-full bg-yellow-400 w-fit px-2 text-black">Integração Totvs com Wake</h6>
-                    <h6 class="text-xs rounded-full bg-yellow-400 w-fit px-2 text-black">Filament</h6>
-                    <h6 class="text-xs rounded-full bg-yellow-400 w-fit px-2 text-black">Laravel</h6>
-                    <h6 class="text-xs rounded-full bg-yellow-400 w-fit px-2 text-black">Automatização de Pedidos</h6>
-                </div>
-                <img src="../assets/img/projects/livrosescolares.jpeg" class="w-[515px] h-[463px] rounded-2xl shadow">
-                <button class="mt-2 self-center flex items-center gap-2 h-8 w-8 shadow-lg text-md rounded-full bg-yellow-500 hover:bg-yellow-400 w-fit px-2 mr-2 text-black -translate-y-14">
-                    <span class="text-sm">Ver mais</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                         stroke="black" class="size-5">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"/>
+                         stroke="black"
+                         class="size-5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5"/>
                     </svg>
                 </button>
             </div>
         </div>
-        <div class="absolute z-10 bottom-1/2 transform -translate-x-1/2 left-0 w-10 h-10 bg-yellow-700 rounded-full
-        flex justify-center items-center cursor-pointer hover:bg-yellow-400 hover:text-black" x-cloak @click="prev($refs.container)">
-            <button class="button is-info">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                     stroke="black"
+    </section>
+
+    <section id="about-me" class="relative z-10 bg-zinc-800 text-white">
+        <div id=title-about-me" class="flex flex-col items-center pt-8 pb-4" data-aos="fade-right">
+            <h4 class="font-['Lora'] text-4xl">Sobre mim</h4>
+            <p class="max-sm:px-5 max-sm:text-sm sm:text-md font-['Open Sans']">Conheça um pouco mais sobre mim e minha trajetória profissional.</p>
+            <a href="../assets/pdf/Charley-Kevin-Web-Developer.pdf"
+               target="_blank" rel="noopener noreferrer"
+               class="w-44 bg-yellow-400 text-black px-4 py-2 rounded-3xl mt-4 text-center"
+            >
+                Download CV
+            </a>
+        </div>
+
+        <div id="description-about-me" class="relative max-sm:px-5 sm:px-20 py-8" data-aos="fade-left"
+             x-data="{
+                slides: [
+                    {
+                        title: 'Desenvolvendo com Twilio',
+                        image: '../assets/img/mockup/twilio_mockup.png',
+                        description: [
+                            {
+                                'topic': 'Desenvolvimento de solução escalável para cadastro de templates de WhatsApp e envio de campanhas:',
+                                'description': 'Implementação multi-tenant utilizando APIs da Twilio e Filament, melhorando a confiabilidade e a experiência do cliente, e ampliando oportunidades de negócios.',
+                            },
+                            {
+                                'topic': 'Desenvolvimento de módulo de gravação de tela em tempo real:',
+                                'description': 'Criação de uma solução para acompanhamento e gerenciamento de gravações, usando Twilio, Python, AWS (Event Bridge, SNS, S3, EC2) e Vue.js.',
+                            }
+                        ],
+                    },
+                    {
+                        title: 'Desenvolvendo com Laravel',
+                        image: '../assets/img/mockup/laravel_mockup.jpg',
+                        description: [
+                            {
+                                'topic': 'Refatoração da plataforma agregadora de produtos da empresa:',
+                                'description': 'Planejamento e execução em equipe da migração de uma estrutura Vue.js e API Node.js para Laravel, utilizando Filament para aumentar a agilidade de desenvolvimento e a usabilidade.',
+                            },
+                            {
+                                'topic': 'Desenvolvimento de funções Lambda na AWS para análises de relatórios de interações com bots:',
+                                'description': 'Processamento e armazenamento de dados em diretórios específicos no Amazon S3, resultando em uma estrutura de dados mais robusta e análises aprimoradas.',
+                            }
+                        ],
+                    },
+                    {
+                        title: 'Desenvolvendo com Wordpress',
+                        image: '../assets/img/mockup/wordpress.png',
+                        description: [
+                            {
+                                'topic': 'Desenvolvimento de projetos com Wordpress:',
+                                'description': 'Criação temas e plugins personalizados, otimização de SEO para melhorar a visibilidade e a experiência do usuário.',
+                            },
+                            {
+                                'topic': 'Integração Woocommerce com Mailchimp:',
+                                'description': 'Integração de e-commerce com ferramenta de automação de marketing, melhorando a comunicação com os clientes e aumentando as vendas.',
+                            }
+                        ],
+                    },
+                ],
+                intervalId: null,
+                startRotation() {
+                    this.intervalId = setInterval(() => {
+                        const currentSlide = this.slides.shift();
+                        this.slides.push(currentSlide);
+                    }, 5000);
+                },
+                stopRotation() {
+                    clearInterval(this.intervalId);
+                    this.intervalId = null;
+                }
+            }" x-init="startRotation()"
+             x-on:mouseenter="stopRotation()"
+             x-on:mouseleave="startRotation()"
+        >
+            <template x-for="(slide, index) in slides" :key="index">
+                <div x-show="index === 0" class="sm:px-20">
+                    <div class="flex justify-between items-center gap-8">
+                        <div x-show="index === 0" class="max-sm:hidden sm:w-1/2">
+                            <img :src="slide.image" class="w-full rounded-2xl shadow">
+                        </div>
+                        <div x-show="index === 0" class="max-sm:w-full sm:w-1/2 flex flex-col justify-stretch">
+                            <h2 class="font-['Lora'] max-sm:text-xl sm:text-2xl max-sm:mb-4 sm:mb-16 text-center" x-text="slide.title"></h2>
+                            <template x-for="(description, index) in slide.description" :key="index">
+                                <div class="mb-4">
+                                    <p class="text-md font-semibold mb-2" x-text="description.topic"></p>
+                                    <p class="text-sm" x-text="description.description"></p>
+                                </div>
+                            </template>
+                        </div>
+                    </div>
+                </div>
+            </template>
+            <button class="absolute max-sm:bottom-1.5 sm:bottom-1/2 transform -translate-x-1/2 max-sm:left-5 sm:left-0
+                max-sm:ml-5 sm:ml-20 w-10 max-sm:h-6 sm:h-10 max-sm:bg-yellow-400 sm:bg-yellow-700 max-sm:rounded-lg
+                sm:rounded-full flex justify-center items-center hover:bg-yellow-400 hover:text-black"
+                    x-on:click="() => {
+                const currentSlide = slides.shift();
+                slides.push(currentSlide);
+            }">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="black"
                      class="size-5">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5"/>
                 </svg>
             </button>
-        </div>
-
-        <div class="absolute z-10 bottom-1/2 transform translate-x-1/2 right-0 w-10 h-10 bg-yellow-700 rounded-full
-        flex justify-center items-center cursor-pointer hover:bg-yellow-400 hover:text-black" x-cloak @click="next($refs.container)">
-            <button class="button is-info">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                     stroke="black"
+            <button class="absolute max-sm:bottom-1.5 sm:bottom-1/2 transform -translate-x-1/2 max-sm:right-5 sm:right-0
+                max-sm::mr-5 sm:mr-20 w-10 max-sm:h-6 sm:h-10 max-sm:bg-yellow-400 sm:bg-yellow-700 max-sm:rounded-lg
+                sm:rounded-full flex justify-center items-center hover:bg-yellow-400 hover:text-black"
+                    x-on:click="() => {
+                const lastSlide = slides.pop();
+                slides.unshift(lastSlide);
+            }">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="black"
                      class="size-5">
                     <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5"/>
                 </svg>
             </button>
+
         </div>
-    </div>
-</section>
+    </section>
 
-<section id="about-me" class="relative z-10 bg-zinc-800 text-white">
-    <div id=title-about-me" class="flex flex-col items-center pt-8 pb-4" data-aos="fade-right">
-        <h4 class="font-['Lora'] text-4xl">Sobre mim</h4>
-        <p class="text-md font-['Open Sans']">Conheça um pouco mais sobre mim e minha trajetória profissional.</p>
-        <a href="../assets/pdf/Charley-Kevin-Web-Developer.pdf"
-           target="_blank" rel="noopener noreferrer"
-           class="w-44 bg-yellow-400 text-black px-4 py-2 rounded-3xl mt-4 text-center"
-        >
-            Download CV
-        </a>
-    </div>
+    <section id="contact" class="relative bg-black max-sm:px-5 sm:px-20 py-8">
+        <div data-aos="fade-left">
+            <div id="title-contact" class="flex justify-center">
+                <h1 class="relative z-10 font-['Lora'] font-semibold text-white text-4xl">Entre em contato</h1>
+            </div>
+            <form action="https://api.web3forms.com/submit"
+                  method="POST"
+                  id="form-contact" class="flex max-sm:flex-col justify-between mt-8 gap-2"
+                  class="needs-validation"
+                  novalidate
+            >
+                <div class="max-sm:w-full sm:w-1/2">
+                    <input type="hidden" name="access_key" value="a959428b-a160-4c96-90b5-216385ad27c6"/>
+                    <input
+                            type="hidden"
+                            name="subject"
+                            value="New Submission from Web3Forms"
+                    />
+                    <input
+                            type="checkbox"
+                            name="botcheck"
+                            id=""
+                            style="display: none;"
+                    />
+                    <input type="hidden" name="recaptcha_response" id="recaptchaResponse">
+                    <input type="text" class="relative z-10 w-full p-4 rounded-3xl" name="name" placeholder="Nome">
+                    <input type="email" class="relative z-10 w-full p-4 mt-4 rounded-3xl" name="email" placeholder="E-mail">
+                    <input type="text" class="relative z-10 w-full p-4 mt-4 rounded-3xl" name="subject_client" placeholder="Assunto">
+                </div>
+                <div class="max-sm:w-full max-sm:mt-2 sm:w-1/2">
+                    <textarea class="relative z-10 w-full h-full p-4 rounded-3xl" name="message" placeholder="Mensagem"></textarea>
+                </div>
+            </form>
+            <div id="actions-contact" class="relative z-10 flex justify-end items-center gap-3 mt-8">
+                <p class="text-xl text-center text-gray-400 text-wrap" id="result"></p>
+                <button type="submit" form="form-contact" class="w-44 bg-yellow-400 text-black px-4 py-2 rounded-3xl">Enviar</button>
+            </div>
+            <div id="background-circle-blur-right"
+                 class="z-0 absolute right-0 -top-2 w-1/4 h-full bg-[#4269F6] rounded-l-full opacity-75 blur-3xl"></div>
+        </div>
+    </section>
 
-    <div id="description-about-me" class="relative px-20 py-8" data-aos="fade-left"
-         x-data="{
-            slides: [
-                {
-                    title: 'Desenvolvendo com Twilio',
-                    image: '../assets/img/mockup/twilio_mockup.png',
-                    description: [
-                        {
-                            'topic': 'Desenvolvimento de solução escalável para cadastro de templates de WhatsApp e envio de campanhas:',
-                            'description': 'Implementação multi-tenant utilizando APIs da Twilio e Filament, melhorando a confiabilidade e a experiência do cliente, e ampliando oportunidades de negócios.',
-                        },
-                        {
-                            'topic': 'Desenvolvimento de módulo de gravação de tela em tempo real:',
-                            'description': 'Criação de uma solução para acompanhamento e gerenciamento de gravações, usando Twilio, Python, AWS (Event Bridge, SNS, S3, EC2) e Vue.js.',
-                        }
-                    ],
-                },
-                {
-                    title: 'Desenvolvendo com Laravel',
-                    image: '../assets/img/mockup/laravel_mockup.jpg',
-                    description: [
-                        {
-                            'topic': 'Refatoração da plataforma agregadora de produtos da empresa:',
-                            'description': 'Planejamento e execução em equipe da migração de uma estrutura Vue.js e API Node.js para Laravel, utilizando Filament para aumentar a agilidade de desenvolvimento e a usabilidade.',
-                        },
-                        {
-                            'topic': 'Desenvolvimento de funções Lambda na AWS para análises de relatórios de interações com bots:',
-                            'description': 'Processamento e armazenamento de dados em diretórios específicos no Amazon S3, resultando em uma estrutura de dados mais robusta e análises aprimoradas.',
-                        }
-                    ],
-                },
-                {
-                    title: 'Desenvolvendo com Wordpress',
-                    image: '../assets/img/mockup/wordpress.png',
-                    description: [
-                        {
-                            'topic': 'Desenvolvimento de projetos com Wordpress:',
-                            'description': 'Criação temas e plugins personalizados, otimização de SEO para melhorar a visibilidade e a experiência do usuário.',
-                        },
-                        {
-                            'topic': 'Integração Woocommerce com Mailchimp:',
-                            'description': 'Integração de e-commerce com ferramenta de automação de marketing, melhorando a comunicação com os clientes e aumentando as vendas.',
-                        }
-                    ],
-                },
-            ],
-            intervalId: null,
-            startRotation() {
-                this.intervalId = setInterval(() => {
-                    const currentSlide = this.slides.shift();
-                    this.slides.push(currentSlide);
-                }, 5000);
-            },
-            stopRotation() {
-                clearInterval(this.intervalId);
-                this.intervalId = null;
-            }
-        }" x-init="startRotation()"
-         x-on:mouseenter="stopRotation()"
-         x-on:mouseleave="startRotation()"
+    <section class="modals fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 z-50"
+         x-show="modal1"
+         x-transition:enter-start="opacity-0 translate-y-5"
+         x-transition:enter="transition duration-200 transform ease"
+         x-transition:leave="transition duration-200 transform ease"
+         x-transition:leave-end="opacity-0 translate-y-5"
+         @click.away="modal1 = false" x-cloak
     >
-        <template x-for="(slide, index) in slides" :key="index">
-            <div x-show="index === 0" class="px-20">
-                <div class="flex justify-between items-center gap-8">
-                    <div x-show="index === 0" class="w-1/2">
-                        <img :src="slide.image" class="w-full rounded-2xl shadow">
-                    </div>
-                    <div x-show="index === 0" class="w-1/2 flex flex-col justify-stretch">
-                        <h2 class="font-['Lora'] text-2xl mb-16 text-center max-lg:hidden" x-text="slide.title"></h2>
-                        <template x-for="(description, index) in slide.description" :key="index">
-                            <div class="mb-4">
-                                <p class="text-md font-semibold mb-2" x-text="description.topic"></p>
-                                <p class="text-sm" x-text="description.description"></p>
-                            </div>
-                        </template>
-                    </div>
-                </div>
-            </div>
-        </template>
-        <button class="absolute bottom-1/2 transform -translate-x-1/2 left-0 ml-20 w-10 h-10 bg-yellow-700 rounded-full
-            flex justify-center items-center hover:bg-yellow-400 hover:text-black"
-                x-on:click="() => {
-            const currentSlide = slides.shift();
-            slides.push(currentSlide);
-        }">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="black"
-                 class="size-5">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5"/>
-            </svg>
-        </button>
-        <button class="absolute bottom-1/2 transform -translate-x-1/2 right-0 mr-20 w-10 h-10 bg-yellow-700 rounded-full
-            flex justify-center items-center hover:bg-yellow-400 hover:text-black"
-                x-on:click="() => {
-            const lastSlide = slides.pop();
-            slides.unshift(lastSlide);
-        }">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="black"
-                 class="size-5">
-                <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5"/>
-            </svg>
-        </button>
-
-    </div>
-</section>
-
-<section id="contact" class="relative bg-black px-20 py-8">
-    <div data-aos="fade-left">
-        <div id="title-contact" class="flex justify-center">
-            <h1 class="font-['Lora'] font-semibold text-white text-4xl">Entre em contato</h1>
-        </div>
-        <form action="https://api.web3forms.com/submit"
-              method="POST"
-              id="form-contact" class="flex justify-between mt-8 gap-2"
-              class="needs-validation"
-              novalidate
-        >
-            <div class="w-1/2">
-                <input type="hidden" name="access_key" value="a959428b-a160-4c96-90b5-216385ad27c6"/>
-                <input
-                        type="hidden"
-                        name="subject"
-                        value="New Submission from Web3Forms"
-                />
-                <input
-                        type="checkbox"
-                        name="botcheck"
-                        id=""
-                        style="display: none;"
-                />
-                <input type="hidden" name="recaptcha_response" id="recaptchaResponse">
-                <input type="text" class="w-full p-4 rounded-3xl" name="name" placeholder="Nome">
-                <input type="email" class="w-full p-4 mt-4 rounded-3xl" name="email" placeholder="E-mail">
-                <input type="text" class="w-full p-4 mt-4 rounded-3xl" name="subject_client" placeholder="Assunto">
-            </div>
-            <div class="w-1/2">
-                <textarea class="relative z-10 w-full h-full p-4 rounded-3xl" name="message" placeholder="Mensagem"></textarea>
-            </div>
-        </form>
-        <div id="actions-contact" class="relative z-10 flex justify-end items-center gap-3 mt-8">
-            <p class="text-xl text-center text-gray-400 text-wrap" id="result"></p>
-            <button type="submit" form="form-contact" class="w-44 bg-yellow-400 text-black px-4 py-2 rounded-3xl">Enviar</button>
-        </div>
-        <div id="background-circle-blur-right"
-             class="z-0 absolute right-0 -top-2 w-1/4 h-full bg-[#4269F6] rounded-l-full opacity-75 blur-3xl"></div>
-    </div>
-</section>
-
-<section class="modals fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 z-50"
-     x-show="modal1"
-     x-transition:enter-start="opacity-0 translate-y-5"
-     x-transition:enter="transition duration-200 transform ease"
-     x-transition:leave="transition duration-200 transform ease"
-     x-transition:leave-end="opacity-0 translate-y-5"
-     @click.away="modal1 = false" x-cloak
->
-    <div class="w-full h-full flex justify-center items-center">
-        <div class="relative w-3/4 h-5/6 bg-white rounded-2xl p-8">
-            <button class="absolute top-4 right-4 w-8 h-8 bg-black text-white rounded-full flex justify-center items-center"
-                    @click="modal1 = !modal1">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                     stroke="white"
-                     class="size-5">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
-                </svg>
-            </button>
-            <h2 class="font-['Lora'] text-2xl text-center mb-2">Gerenciamento de campanhas Whatsapp (Twilio)</h2>
-            <div class="flex justify-center gap-2 mb-10">
-                <button class="flex items-center gap-2 text-md rounded-full shadow-md bg-yellow-400 w-fit px-2 py-1 text-black cursor-pointer">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z" />
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+        <div class="w-full h-full flex justify-center items-center">
+            <div class="relative w-3/4 h-5/6 bg-white rounded-2xl p-8 overflow-y-scroll">
+                <button class="sticky max-sm:top-0 sm:top-4 left-[95%] w-8 h-8 bg-black text-white rounded-full flex justify-center items-center"
+                        @click="modal1 = !modal1">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                         stroke="white"
+                         class="size-5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
                     </svg>
-                    <a href="https://smartcx.wittel.com" target="_blank" rel="noopener noreferrer">Acessar</a>
                 </button>
-            </div>
-            <div class="flex justify-center gap-4">
-                <div class="flex flex-col justify-stretch">
-                    <div class="mb-4">
-                        <p class="text-md font-semibold mb-2">Implementação Multi-Tenant com APIs da Twilio e Filament:</p>
-                        <p class="text-sm indent-8 mb-2">Nosso cliente buscava uma solução que melhorasse a confiabilidade e a experiência do cliente, ao mesmo tempo em que expandisse as oportunidades de negócios. Implementamos uma arquitetura multi-tenant utilizando as APIs da Twilio e o framework Filament, criando uma plataforma robusta e escalável.</p>
-                        <p class="text-sm indent-8 mb-2">Através das APIs da Twilio, conseguimos integrar funcionalidades de comunicação avançadas, como mensagens SMS, chamadas de voz e videochamadas, diretamente na plataforma do cliente. Isso resultou em uma comunicação mais eficiente e em tempo real, melhorando significativamente a experiência do usuário final.</p>
-                        <p class="text-sm indent-8 mb-2">O uso de Filament permitiu a criação de uma interface de administração intuitiva e poderosa, facilitando a gestão dos múltiplos inquilinos (tenants) e suas respectivas configurações. Isso não apenas aumentou a confiabilidade da plataforma, mas também proporcionou uma experiência de gerenciamento simplificada e eficaz para o cliente.</p>
-                        <p class="text-sm indent-8 mb-2">Como resultado, nosso cliente viu uma melhora substancial na satisfação do cliente final e uma expansão nas oportunidades de negócios, graças à capacidade de oferecer serviços de comunicação de alta qualidade e gerenciamento eficiente. Essa implementação multi-tenant demonstrou ser uma solução estratégica, elevando a confiabilidade e a experiência do cliente a novos patamares.</p>
+                <h2 class="font-['Lora'] text-2xl text-center mb-2">Gerenciamento de campanhas Whatsapp (Twilio)</h2>
+                <div class="flex justify-center gap-2 mb-10">
+                    <button class="flex items-center gap-2 text-md rounded-full shadow-md bg-yellow-400 w-fit px-2 py-1 text-black cursor-pointer">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                        </svg>
+                        <a href="https://smartcx.wittel.com" target="_blank" rel="noopener noreferrer">Acessar</a>
+                    </button>
+                </div>
+                <div class="flex justify-center gap-4">
+                    <div class="flex flex-col justify-stretch">
+                        <div class="mb-4">
+                            <p class="text-md font-semibold mb-2">Implementação Multi-Tenant com APIs da Twilio e Filament:</p>
+                            <p class="text-sm indent-8 mb-2">Nosso cliente buscava uma solução que melhorasse a confiabilidade e a experiência do cliente, ao mesmo tempo em que expandisse as oportunidades de negócios. Implementamos uma arquitetura multi-tenant utilizando as APIs da Twilio e o framework Filament, criando uma plataforma robusta e escalável.</p>
+                            <p class="text-sm indent-8 mb-2">Através das APIs da Twilio, conseguimos integrar funcionalidades de comunicação avançadas, como mensagens SMS, chamadas de voz e videochamadas, diretamente na plataforma do cliente. Isso resultou em uma comunicação mais eficiente e em tempo real, melhorando significativamente a experiência do usuário final.</p>
+                            <p class="text-sm indent-8 mb-2">O uso de Filament permitiu a criação de uma interface de administração intuitiva e poderosa, facilitando a gestão dos múltiplos inquilinos (tenants) e suas respectivas configurações. Isso não apenas aumentou a confiabilidade da plataforma, mas também proporcionou uma experiência de gerenciamento simplificada e eficaz para o cliente.</p>
+                            <p class="text-sm indent-8 mb-2">Como resultado, nosso cliente viu uma melhora substancial na satisfação do cliente final e uma expansão nas oportunidades de negócios, graças à capacidade de oferecer serviços de comunicação de alta qualidade e gerenciamento eficiente. Essa implementação multi-tenant demonstrou ser uma solução estratégica, elevando a confiabilidade e a experiência do cliente a novos patamares.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<section class="modals fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 z-50"
-         x-show="modal2"
-         x-transition:enter-start="opacity-0 translate-y-5"
-         x-transition:enter="transition duration-200 transform ease"
-         x-transition:leave="transition duration-200 transform ease"
-         x-transition:leave-end="opacity-0 translate-y-5"
-         @click.away="modal2 = false" x-cloak
->
-    <div class="w-full h-full flex justify-center items-center">
-        <div class="relative w-3/4 h-5/6 bg-white rounded-2xl p-8">
-            <button class="absolute top-4 right-4 w-8 h-8 bg-black text-white rounded-full flex justify-center items-center"
-                    @click="modal2 = !modal2">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                     stroke="white"
-                     class="size-5">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
-                </svg>
-            </button>
-            <h2 class="font-['Lora'] text-2xl text-center mb-2">Plataforma de E-commerce para Vídeos Personalizados</h2>
-            <div class="flex justify-center gap-2 mb-10">
-                <button class="flex items-center gap-2 text-md rounded-full shadow-md bg-yellow-400 w-fit px-2 py-1 text-black cursor-pointer">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z" />
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+    <section class="modals fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 z-50"
+             x-show="modal2"
+             x-transition:enter-start="opacity-0 translate-y-5"
+             x-transition:enter="transition duration-200 transform ease"
+             x-transition:leave="transition duration-200 transform ease"
+             x-transition:leave-end="opacity-0 translate-y-5"
+             @click.away="modal2 = false" x-cloak
+    >
+        <div class="w-full h-full flex justify-center items-center">
+            <div class="relative w-3/4 h-5/6 bg-white rounded-2xl p-8 overflow-y-scroll">
+                <button class="sticky max-sm:top-0 sm:top-4 left-[95%] w-8 h-8 bg-black text-white rounded-full flex justify-center items-center"
+                        @click="modal2 = !modal2">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                         stroke="white"
+                         class="size-5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
                     </svg>
-                    <a href="https://hollerly.com" target="_blank" rel="noopener noreferrer">Acessar</a>
                 </button>
-            </div>
-            <div class="flex justify-center gap-4">
-                <div class="flex flex-col justify-stretch">
-                    <div class="mb-4">
-                        <p class="text-md font-semibold mb-2">Conectando Clientes e Influenciadores:</p>
-                        <p class="text-sm indent-8 mb-2">Nosso cliente desejava uma plataforma que permitisse aos usuários solicitar vídeos personalizados e que as empresas pudessem contratar influenciadores de forma eficiente. A solução existente não atendia completamente às suas necessidades específicas, então transformamos a plataforma adquirida em um hub dinâmico e funcional.</p>
-                        <p class="text-sm indent-8 mb-2">Utilizando ReactJS no frontend e PHP no backend, desenvolvemos uma solução robusta e altamente personalizada. A nova plataforma não só facilita a criação de conteúdo exclusivo, mas também melhora significativamente o engajamento entre marcas e seus públicos-alvo. Com uma interface intuitiva e funcionalidades otimizadas, a plataforma oferece uma experiência de usuário impecável e personalizada.</p>
-                        <p class="text-sm indent-8 mb-2">O impacto dessa transformação foi notável. Os clientes agora podem solicitar vídeos de maneira simples e direta, enquanto as empresas têm acesso a uma base diversificada de influenciadores. A personalização e a eficiência operacional resultaram em maior satisfação do cliente e crescimento no engajamento. Esta solução sob medida demonstrou ser um investimento valioso, potencializando o marketing digital e a conexão entre clientes e influenciadores.</p>
+                <h2 class="font-['Lora'] text-2xl text-center mb-2">Plataforma de E-commerce para Vídeos Personalizados</h2>
+                <div class="flex justify-center gap-2 mb-10">
+                    <button class="flex items-center gap-2 text-md rounded-full shadow-md bg-yellow-400 w-fit px-2 py-1 text-black cursor-pointer">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                        </svg>
+                        <a href="https://hollerly.com" target="_blank" rel="noopener noreferrer">Acessar</a>
+                    </button>
+                </div>
+                <div class="flex justify-center gap-4">
+                    <div class="flex flex-col justify-stretch">
+                        <div class="mb-4">
+                            <p class="text-md font-semibold mb-2">Conectando Clientes e Influenciadores:</p>
+                            <p class="text-sm indent-8 mb-2">Nosso cliente desejava uma plataforma que permitisse aos usuários solicitar vídeos personalizados e que as empresas pudessem contratar influenciadores de forma eficiente. A solução existente não atendia completamente às suas necessidades específicas, então transformamos a plataforma adquirida em um hub dinâmico e funcional.</p>
+                            <p class="text-sm indent-8 mb-2">Utilizando ReactJS no frontend e PHP no backend, desenvolvemos uma solução robusta e altamente personalizada. A nova plataforma não só facilita a criação de conteúdo exclusivo, mas também melhora significativamente o engajamento entre marcas e seus públicos-alvo. Com uma interface intuitiva e funcionalidades otimizadas, a plataforma oferece uma experiência de usuário impecável e personalizada.</p>
+                            <p class="text-sm indent-8 mb-2">O impacto dessa transformação foi notável. Os clientes agora podem solicitar vídeos de maneira simples e direta, enquanto as empresas têm acesso a uma base diversificada de influenciadores. A personalização e a eficiência operacional resultaram em maior satisfação do cliente e crescimento no engajamento. Esta solução sob medida demonstrou ser um investimento valioso, potencializando o marketing digital e a conexão entre clientes e influenciadores.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<section class="modals fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 z-50"
-         x-show="modal3"
-         x-transition:enter-start="opacity-0 translate-y-5"
-         x-transition:enter="transition duration-200 transform ease"
-         x-transition:leave="transition duration-200 transform ease"
-         x-transition:leave-end="opacity-0 translate-y-5"
-         @click.away="modal3 = false" x-cloak
->
-    <div class="w-full h-full flex justify-center items-center">
-        <div class="relative w-3/4 h-5/6 bg-white rounded-2xl p-8">
-            <button class="absolute top-4 right-4 w-8 h-8 bg-black text-white rounded-full flex justify-center items-center"
-                    @click="modal3 = !modal3">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                     stroke="white"
-                     class="size-5">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
-                </svg>
-            </button>
-            <h2 class="font-['Lora'] text-2xl text-center mb-2">Transformação de Site WordPress com Filament</h2>
-            <div class="flex justify-center gap-2 mb-10">
-                <button class="flex items-center gap-2 text-md rounded-full shadow-md bg-yellow-400 w-fit px-2 py-1 text-black cursor-pointer">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z" />
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+    <section class="modals fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 z-50"
+             x-show="modal3"
+             x-transition:enter-start="opacity-0 translate-y-5"
+             x-transition:enter="transition duration-200 transform ease"
+             x-transition:leave="transition duration-200 transform ease"
+             x-transition:leave-end="opacity-0 translate-y-5"
+             @click.away="modal3 = false" x-cloak
+    >
+        <div class="w-full h-full flex justify-center items-center">
+            <div class="relative w-3/4 h-5/6 bg-white rounded-2xl p-8 overflow-y-scroll">
+                <button class="sticky max-sm:top-0 sm:top-4 left-[95%] w-8 h-8 bg-black text-white rounded-full flex justify-center items-center"
+                        @click="modal3 = !modal3">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                         stroke="white"
+                         class="size-5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
                     </svg>
-                    <a href="https://academico.faculdadepaulopicanco.edu.br/grau-academico" target="_blank" rel="noopener noreferrer">Acessar</a>
                 </button>
-            </div>
-            <div class="flex justify-center gap-4">
-                <div class="flex flex-col justify-stretch">
-                    <div class="mb-4">
-                        <p class="text-md font-semibold mb-2">Página Customizada com Cadastros Intuitivos e Log de Alterações:</p>
-                        <p class="text-sm indent-8 mb-2">Nosso cliente, com um site WordPress já consolidado, enfrentava dificuldades em gerenciar cadastros e desejava funcionalidades que o WordPress padrão não oferecia. Eles precisavam de uma solução que simplificasse o processo de cadastro e fornecesse um registro detalhado das alterações feitas nos dados.</p>
-                        <p class="text-sm indent-8 mb-2">Compreendendo essas necessidades, desenvolvemos uma página customizada utilizando Tailwind CSS para um design moderno e atraente, e Filament para o gerenciamento eficiente das informações. A nova página não só tornou os cadastros mais fáceis e intuitivos, mas também introduziu uma funcionalidade exclusiva de log de alterações, permitindo ao cliente rastrear todas as modificações feitas.</p>
-                        <p class="text-sm indent-8 mb-2">Essa transformação não só melhorou significativamente a experiência do usuário, proporcionando uma interface amigável e funcional, mas também facilitou a administração do site, oferecendo ferramentas avançadas que antes não estavam disponíveis. Como resultado, o cliente agora tem uma solução que atende perfeitamente às suas necessidades, com uma plataforma que é tanto eficiente quanto fácil de usar.</p>
+                <h2 class="font-['Lora'] text-2xl text-center mb-2">Transformação de Site WordPress com Filament</h2>
+                <div class="flex justify-center gap-2 mb-10">
+                    <button class="flex items-center gap-2 text-md rounded-full shadow-md bg-yellow-400 w-fit px-2 py-1 text-black cursor-pointer">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                        </svg>
+                        <a href="https://academico.faculdadepaulopicanco.edu.br/grau-academico" target="_blank" rel="noopener noreferrer">Acessar</a>
+                    </button>
+                </div>
+                <div class="flex justify-center gap-4">
+                    <div class="flex flex-col justify-stretch">
+                        <div class="mb-4">
+                            <p class="text-md font-semibold mb-2">Página Customizada com Cadastros Intuitivos e Log de Alterações:</p>
+                            <p class="text-sm indent-8 mb-2">Nosso cliente, com um site WordPress já consolidado, enfrentava dificuldades em gerenciar cadastros e desejava funcionalidades que o WordPress padrão não oferecia. Eles precisavam de uma solução que simplificasse o processo de cadastro e fornecesse um registro detalhado das alterações feitas nos dados.</p>
+                            <p class="text-sm indent-8 mb-2">Compreendendo essas necessidades, desenvolvemos uma página customizada utilizando Tailwind CSS para um design moderno e atraente, e Filament para o gerenciamento eficiente das informações. A nova página não só tornou os cadastros mais fáceis e intuitivos, mas também introduziu uma funcionalidade exclusiva de log de alterações, permitindo ao cliente rastrear todas as modificações feitas.</p>
+                            <p class="text-sm indent-8 mb-2">Essa transformação não só melhorou significativamente a experiência do usuário, proporcionando uma interface amigável e funcional, mas também facilitou a administração do site, oferecendo ferramentas avançadas que antes não estavam disponíveis. Como resultado, o cliente agora tem uma solução que atende perfeitamente às suas necessidades, com uma plataforma que é tanto eficiente quanto fácil de usar.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<section class="modals fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 z-50"
-         x-show="modal4"
-         x-transition:enter-start="opacity-0 translate-y-5"
-         x-transition:enter="transition duration-200 transform ease"
-         x-transition:leave="transition duration-200 transform ease"
-         x-transition:leave-end="opacity-0 translate-y-5"
-         @click.away="modal4 = false" x-cloak
->
-    <div class="w-full h-full flex justify-center items-center">
-        <div class="relative w-3/4 h-5/6 bg-white rounded-2xl p-8">
-            <button class="absolute top-4 right-4 w-8 h-8 bg-black text-white rounded-full flex justify-center items-center"
-                    @click="modal4 = !modal4">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                     stroke="white"
-                     class="size-5">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
-                </svg>
-            </button>
-            <h2 class="font-['Lora'] text-2xl text-center mb-10">Integração Avançada entre CRM Totvs e Wake</h2>
-            <div class="flex justify-center gap-4">
-                <div class="flex flex-col justify-stretch">
-                    <div class="mb-4">
-                        <p class="text-md font-semibold mb-2">Automatização Completa de Pedidos e Gestão de Produtos:</p>
-                        <p class="text-sm indent-8 mb-2">Enfrentando desafios com a gestão manual de pedidos e atualização de produtos, nosso cliente buscava uma solução que não apenas automatizasse esses processos, mas também integrasse perfeitamente o CRM Totvs com sua plataforma de e-commerce, Wake.</p>
-                        <p class="text-sm indent-8 mb-2">Nós implementamos uma integração robusta utilizando Laravel, capaz de sincronizar pedidos via webhook, atualizar automaticamente os status de envio, gerenciar estoque e adicionar notas fiscais eletrônicas de forma eficiente. Com essa solução, o cliente agora desfruta de um fluxo de trabalho contínuo e automatizado, que reduz significativamente o tempo gasto em tarefas manuais e minimiza erros operacionais.</p>
-                        <p class="text-sm indent-8 mb-2">Além disso, desenvolvemos telas de gerenciamento personalizadas e intuitivas com Filament, permitindo que a equipe administre facilmente todos os aspectos da operação, desde pedidos até a gestão de estoque. Essa integração não só melhorou a eficiência operacional, mas também proporcionou uma experiência de usuário aprimorada tanto para a equipe interna quanto para os clientes finais.</p>
-                        <p class="text-sm indent-8 mb-2">Com nossa abordagem estratégica e foco em automação, conseguimos transformar as operações do nosso cliente, proporcionando uma gestão simplificada e eficiente que suporta o crescimento e escalabilidade do negócio.</p>
+    <section class="modals fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 z-50"
+             x-show="modal4"
+             x-transition:enter-start="opacity-0 translate-y-5"
+             x-transition:enter="transition duration-200 transform ease"
+             x-transition:leave="transition duration-200 transform ease"
+             x-transition:leave-end="opacity-0 translate-y-5"
+             @click.away="modal4 = false" x-cloak
+    >
+        <div class="w-full h-full flex justify-center items-center">
+            <div class="relative w-3/4 h-5/6 bg-white rounded-2xl p-8 overflow-y-scroll">
+                <button class="sticky max-sm:top-0 sm:top-4 left-[95%] w-8 h-8 bg-black text-white rounded-full flex justify-center items-center"
+                        @click="modal4 = !modal4">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                         stroke="white"
+                         class="size-5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                </button>
+                <h2 class="font-['Lora'] text-2xl text-center mb-10">Integração Avançada entre CRM Totvs e Wake</h2>
+                <div class="flex justify-center gap-4">
+                    <div class="flex flex-col justify-stretch">
+                        <div class="mb-4">
+                            <p class="text-md font-semibold mb-2">Automatização Completa de Pedidos e Gestão de Produtos:</p>
+                            <p class="text-sm indent-8 mb-2">Enfrentando desafios com a gestão manual de pedidos e atualização de produtos, nosso cliente buscava uma solução que não apenas automatizasse esses processos, mas também integrasse perfeitamente o CRM Totvs com sua plataforma de e-commerce, Wake.</p>
+                            <p class="text-sm indent-8 mb-2">Nós implementamos uma integração robusta utilizando Laravel, capaz de sincronizar pedidos via webhook, atualizar automaticamente os status de envio, gerenciar estoque e adicionar notas fiscais eletrônicas de forma eficiente. Com essa solução, o cliente agora desfruta de um fluxo de trabalho contínuo e automatizado, que reduz significativamente o tempo gasto em tarefas manuais e minimiza erros operacionais.</p>
+                            <p class="text-sm indent-8 mb-2">Além disso, desenvolvemos telas de gerenciamento personalizadas e intuitivas com Filament, permitindo que a equipe administre facilmente todos os aspectos da operação, desde pedidos até a gestão de estoque. Essa integração não só melhorou a eficiência operacional, mas também proporcionou uma experiência de usuário aprimorada tanto para a equipe interna quanto para os clientes finais.</p>
+                            <p class="text-sm indent-8 mb-2">Com nossa abordagem estratégica e foco em automação, conseguimos transformar as operações do nosso cliente, proporcionando uma gestão simplificada e eficiente que suporta o crescimento e escalabilidade do negócio.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<footer class="bg-black">
-    <div class="relative text-white px-20 py-4 flex items-center">
-        <img src="../assets/img/logo.png" alt="Charley Kevin" class="flex-shrink-0 w-28">
-        <div class="absolute left-1/2 transform -translate-x-1/2 flex gap-2">
-            <a href="https://github.com/CharleyKevin" class="w-8 h-8 bg-yellow-400 rounded-full flex justify-center items-center"  target="_blank" rel="noopener noreferrer">
-                <img src="../assets/img/socials/github.png" alt="Github">
-            </a>
-            <a href="https://www.linkedin.com/in/charley-kevin/" class="w-8 h-8 bg-yellow-400 rounded-full flex justify-center items-center"  target="_blank" rel="noopener noreferrer">
-                <img src="../assets/img/socials/linkedin.png" alt="Linkedin">
-            </a>
+    <footer class="bg-black">
+        <div class="relative text-white max-sm:px-5 sm:px-20 py-4 flex items-center">
+            <img src="../assets/img/logo.png" alt="Charley Kevin" class="flex-shrink-0 w-28">
+            <div class="absolute left-1/2 transform -translate-x-1/2 flex gap-2">
+                <a href="https://github.com/CharleyKevin" class="w-8 h-8 bg-yellow-400 rounded-full flex justify-center items-center"  target="_blank" rel="noopener noreferrer">
+                    <img src="../assets/img/socials/github.png" alt="Github">
+                </a>
+                <a href="https://www.linkedin.com/in/charley-kevin/" class="w-8 h-8 bg-yellow-400 rounded-full flex justify-center items-center"  target="_blank" rel="noopener noreferrer">
+                    <img src="../assets/img/socials/linkedin.png" alt="Linkedin">
+                </a>
+            </div>
+            <p class="ml-auto flex-shrink-0">© 2024<span class="max-sm:hidden">. Todos os direitos reservados.</span></p>
         </div>
-        <p class="ml-auto flex-shrink-0">© 2024. Todos os direitos reservados.</p>
-    </div>
-</footer>
+    </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-<script>
-    AOS.init({
-        duration: 1000,
-    });
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+        });
 
-    function slider() {
-        return {
-            hideScrollbar: false,
-            pixelShift: 350,
-            prev(e) {
-                e.scrollLeft -= this.pixelShift;
-            },
+        function body() {
+            return {
+                modal1: false,
+                modal2: false,
+                modal3: false,
+                modal4: false,
+                offset: 55,
 
-            next(e) {
-                e.scrollLeft += this.pixelShift;
-            },
-        };
-    }
-
-    (function () {
-        "use strict";
-        const form = document.getElementById("form-contact");
-        const result = document.getElementById("result");
-        form.addEventListener(
-            "submit",
-            function (event) {
-                console.debug("Form Submitted");
-                if (!form.checkValidity()) {
-                    event.preventDefault();
-                    event.stopPropagation();
-
-                    form.querySelectorAll(":invalid")[0].focus();
-                } else {
-                    const formData = new FormData(form);
-                    event.preventDefault();
-                    event.stopPropagation();
-                    const object = {};
-                    formData.forEach((value, key) => {
-                        object[key] = value;
-                    });
-                    const json = JSON.stringify(object);
-                    result.innerHTML = "Please wait...";
-
-                    fetch("https://api.web3forms.com/submit", {
-                        method: "POST",
-                        headers: {
-                            "Content-Type": "application/json",
-                            Accept: "application/json"
-                        },
-                        body: json
-                    })
-                        .then(async (response) => {
-                            let json = await response.json();
-                            if (response.status == 200) {
-                                result.innerHTML = json.message;
-                                result.classList.remove("text-gray-500");
-                                result.classList.add("text-green-500");
-                            } else {
-                                console.log(response);
-                                result.innerHTML = json.message;
-                                result.classList.remove("text-gray-500");
-                                result.classList.add("text-red-500");
-                            }
-                        })
-                        .catch((error) => {
-                            console.log(error);
-                            result.innerHTML = "Something went wrong!";
-                        })
-                        .then(function () {
-                            form.reset();
-                            form.classList.remove("was-validated");
-                            setTimeout(() => {
-                                result.style.display = "none";
-                            }, 5000);
+                scrollTo(target) {
+                    const targetElement = document.querySelector(target);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - this.offset,
+                            behavior: 'smooth'
                         });
+                    }
                 }
-                form.classList.add("was-validated");
-            },
-            false
-        );
-    })();
-</script>
+            };
+        }
+
+        function slider() {
+            return {
+                hideScrollbar: false,
+                pixelShift: 350,
+                prev(e) {
+                    e.scrollLeft -= this.pixelShift;
+                },
+
+                next(e) {
+                    e.scrollLeft += this.pixelShift;
+                },
+            };
+        }
+
+        (function () {
+            "use strict";
+            const form = document.getElementById("form-contact");
+            const result = document.getElementById("result");
+            form.addEventListener(
+                "submit",
+                function (event) {
+                    console.debug("Form Submitted");
+                    if (!form.checkValidity()) {
+                        event.preventDefault();
+                        event.stopPropagation();
+
+                        form.querySelectorAll(":invalid")[0].focus();
+                    } else {
+                        const formData = new FormData(form);
+                        event.preventDefault();
+                        event.stopPropagation();
+                        const object = {};
+                        formData.forEach((value, key) => {
+                            object[key] = value;
+                        });
+                        const json = JSON.stringify(object);
+                        result.innerHTML = "Please wait...";
+
+                        fetch("https://api.web3forms.com/submit", {
+                            method: "POST",
+                            headers: {
+                                "Content-Type": "application/json",
+                                Accept: "application/json"
+                            },
+                            body: json
+                        })
+                            .then(async (response) => {
+                                let json = await response.json();
+                                if (response.status == 200) {
+                                    result.innerHTML = json.message;
+                                    result.classList.remove("text-gray-500");
+                                    result.classList.add("text-green-500");
+                                } else {
+                                    console.log(response);
+                                    result.innerHTML = json.message;
+                                    result.classList.remove("text-gray-500");
+                                    result.classList.add("text-red-500");
+                                }
+                            })
+                            .catch((error) => {
+                                console.log(error);
+                                result.innerHTML = "Something went wrong!";
+                            })
+                            .then(function () {
+                                form.reset();
+                                form.classList.remove("was-validated");
+                                setTimeout(() => {
+                                    result.style.display = "none";
+                                }, 5000);
+                            });
+                    }
+                    form.classList.add("was-validated");
+                },
+                false
+            );
+        })();
+    </script>
 </body>
 </html>
