@@ -1,3 +1,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@keyframes slide {
+    to {
+        translate: calc(-25% - 0.5rem);
+    }
+}
+
+.logos {
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.logos:hover .logos-slide {
+    animation-play-state: paused;
+}
+
+.logos-slide {
+    animation: slide 15s linear infinite;
+}
