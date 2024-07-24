@@ -14,7 +14,7 @@
         }
     </style>
 </head>
-<body class="w-full mx-auto overflow-x-hidden" x-data="body">
+<body class="w-full mx-auto overflow-x-hidden bg-black" x-data="body">
     <nav class="fixed top-0 h-[55px] bg-black w-full z-50">
         <header class="max-w-[1920px] flex max-sm:justify-center sm:justify-between py-3 px-20 text-white mx-auto">
             <div id="logo" class="w-28" data-aos="fade-right">
@@ -39,7 +39,8 @@
         </header>
     </nav>
 
-    <section id="banner" class="mt-[55px] bg-black flex justify-between px-5 sm:px-20 py-8 overflow-x-hidden">
+    <section id="banner" class="max-w-[1920px] mx-auto mt-[55px] bg-black flex justify-between px-5 sm:px-20 py-8
+        overflow-x-hidden overflow-y-hidden">
         <div id="left-banner" class="flex-auto flex flex-col items-start gap-6 pt-2 sm:pt-24 pr-4 w-1/2" data-aos="fade-up">
             <h1 class="max-sm:self-center max-sm:text-center text-white text-3xl sm:text-7xl font-semibold font-['Lora']">Olá, eu sou <br>Charley Kevin</h1>
             <div class="max-sm:w-24 max-sm:h-8 w-30 h-10 flex self-center sm:hidden">
@@ -59,10 +60,7 @@
             <p class="max-sm:text-center text-white text-sm">Sou especialista em desenvolvimento de sistemas e soluções personalizadas. Tenho expertise na criação de bots inteligentes, desenvolvimento de sites em WordPress e integração de sistemas complexos.</p>
             <p class="max-sm:text-center text-white text-sm">Utilizo tecnologias avançadas como <span class="text-yellow-400 italic">Laravel, Twilio e Filament</span> para garantir eficiência, escalabilidade e inovação em cada projeto.</p>
             <div id="actions-banner" class="w-full flex max-sm:justify-center">
-                <button class="max-sm:hidden sm:w-44 bg-yellow-400 text-black px-4 py-2 rounded-3xl mt-4">
-                    <a href="#about-me">Saiba Mais</a>
-                </button>
-                <button class="sm:w-44 flex items-end gap-3 ml-4 border border-yellow-400 text-yellow-400 px-4 py-2 rounded-3xl mt-4" data-aos="fade-up">
+                <button class="sm:w-48 flex items-end gap-3 border border-yellow-400 text-yellow-400 px-4 py-2 rounded-3xl mt-4" data-aos="fade-up">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5 animate-bounce">
                         <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 5.25 7.5 7.5 7.5-7.5m-15 6 7.5 7.5 7.5-7.5" />
                     </svg>
@@ -138,9 +136,9 @@
         </div>
     </section>
 
-    <section id="projects" class="relative bg-black max-sm:pl-5 sm:px-5 sm:px-20 py-8 overflow-x-hidden" x-data="slider()">
+    <section id="projects" class="max-w-[1920px] mx-auto relative bg-black max-sm:pl-5 sm:px-20 py-8 overflow-x-hidden" x-data="slider()">
         <div id="background-circle-blur-left"
-             class="z-0 absolute left-0 -top-2 w-1/4 h-[75%] bg-[#4269F6] rounded-r-full opacity-75 blur-3xl"
+             class="z-0 absolute left-40 -top-2 w-1/4 h-3/5 bg-[#4269F6] rounded-r-full opacity-75 blur-3xl"
              data-aos="fade-left"
         ></div>
         <div id="title-projects" class="relative z-10 text-white font-['Lora'] flex max-sm:flex-col max-sm:justify-center

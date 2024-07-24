@@ -695,20 +695,28 @@ video {
   top: 0px;
 }
 
-.left-2 {
-  left: 0.5rem;
+.left-20 {
+  left: 5rem;
 }
 
-.left-4 {
-  left: 1rem;
+.left-28 {
+  left: 7rem;
 }
 
-.left-6 {
-  left: 1.5rem;
+.left-32 {
+  left: 8rem;
 }
 
-.top-2 {
-  top: 0.5rem;
+.-left-36 {
+  left: -9rem;
+}
+
+.left-36 {
+  left: 9rem;
+}
+
+.left-40 {
+  left: 10rem;
 }
 
 .isolate {
@@ -994,6 +1002,10 @@ video {
   height: 100%;
 }
 
+.h-3\/5 {
+  height: 60%;
+}
+
 .w-1\/2 {
   width: 50%;
 }
@@ -1062,6 +1074,10 @@ video {
 .w-max {
   width: -moz-max-content;
   width: max-content;
+}
+
+.w-3\/5 {
+  width: 60%;
 }
 
 .max-w-\[1920px\] {
@@ -3169,10 +3185,6 @@ video {
     top: 0px;
   }
 
-  .max-sm\:left-6 {
-    left: 1.5rem;
-  }
-
   .max-sm\:z-10 {
     z-index: 10;
   }
@@ -3197,10 +3209,6 @@ video {
     margin-top: 1.75rem;
   }
 
-  .max-sm\:mt-16 {
-    margin-top: 4rem;
-  }
-
   .max-sm\:hidden {
     display: none;
   }
@@ -3219,10 +3227,6 @@ video {
 
   .max-sm\:h-8 {
     height: 2rem;
-  }
-
-  .max-sm\:h-full {
-    height: 100%;
   }
 
   .max-sm\:w-11\/12 {
@@ -3326,11 +3330,6 @@ video {
   .max-sm\:font-semibold {
     font-weight: 600;
   }
-
-  .max-sm\:blur-3xl {
-    --tw-blur: blur(64px);
-    filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
-  }
 }
 
 @media (min-width: 640px) {
@@ -3360,10 +3359,6 @@ video {
 
   .sm\:mr-20 {
     margin-right: 5rem;
-  }
-
-  .sm\:mt-36 {
-    margin-top: 9rem;
   }
 
   .sm\:hidden {
@@ -3402,20 +3397,16 @@ video {
     width: 515px;
   }
 
-  .sm\:w-56 {
-    width: 14rem;
-  }
-
   .sm\:w-52 {
     width: 13rem;
   }
 
-  .sm\:min-w-\[515px\] {
-    min-width: 515px;
+  .sm\:w-48 {
+    width: 12rem;
   }
 
-  .sm\:justify-center {
-    justify-content: center;
+  .sm\:min-w-\[515px\] {
+    min-width: 515px;
   }
 
   .sm\:justify-between {
@@ -3452,16 +3443,6 @@ video {
 
   .sm\:underline {
     text-decoration-line: underline;
-  }
-}
-
-@media (min-width: 1024px) {
-  .lg\:left-20 {
-    left: 5rem;
-  }
-
-  .lg\:h-3\/5 {
-    height: 60%;
   }
 }
 
