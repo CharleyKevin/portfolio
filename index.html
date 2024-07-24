@@ -15,28 +15,29 @@
     </style>
 </head>
 <body class="w-full mx-auto overflow-x-hidden" x-data="body">
-    <header class="fixed top-0 h-[55px] bg-black w-full flex max-sm:justify-center sm:justify-between py-3 px-20 z-50
-        text-white">
-        <div id="logo" class="w-28" data-aos="fade-right">
-            <img src="assets/img/logo.png" alt="Charley Kevin">
-        </div>
-        <div class="max-sm:hidden" id="menu" data-aos="fade-left">
-            <ul class="text-white flex gap-8 text-base text-md font-normal font-['Open Sans']">
-                <li class="hover:text-yellow-400 hover:border-b hover:border-b-yellow-400">
-                    <a href="#banner" @click.prevent="scrollTo('#banner')">Home</a>
-                </li>
-                <li class="hover:text-yellow-400 hover:border-b hover:border-b-yellow-400">
-                    <a href="#projects" @click.prevent="scrollTo('#projects')">Portfólio</a>
-                </li>
-                <li class="hover:text-yellow-400 hover:border-b hover:border-b-yellow-400">
-                    <a href="#about-me" @click.prevent="scrollTo('#about-me')">Sobre</a>
-                </li>
-                <li class="hover:text-yellow-400 hover:border-b hover:border-b-yellow-400">
-                    <a href="#contact" @click.prevent="scrollTo('#contact')">Contato</a>
-                </li>
-            </ul>
-        </div>
-    </header>
+    <nav class="fixed top-0 h-[55px] bg-black w-full z-50">
+        <header class="max-w-[1920px] flex max-sm:justify-center sm:justify-between py-3 px-20 text-white mx-auto">
+            <div id="logo" class="w-28" data-aos="fade-right">
+                <img src="assets/img/logo.png" alt="Charley Kevin">
+            </div>
+            <div class="max-sm:hidden" id="menu" data-aos="fade-left">
+                <ul class="text-white flex gap-8 text-base text-md font-normal font-['Open Sans']">
+                    <li class="hover:text-yellow-400 hover:border-b hover:border-b-yellow-400">
+                        <a href="#banner" @click.prevent="scrollTo('#banner')">Home</a>
+                    </li>
+                    <li class="hover:text-yellow-400 hover:border-b hover:border-b-yellow-400">
+                        <a href="#projects" @click.prevent="scrollTo('#projects')">Portfólio</a>
+                    </li>
+                    <li class="hover:text-yellow-400 hover:border-b hover:border-b-yellow-400">
+                        <a href="#about-me" @click.prevent="scrollTo('#about-me')">Sobre</a>
+                    </li>
+                    <li class="hover:text-yellow-400 hover:border-b hover:border-b-yellow-400">
+                        <a href="#contact" @click.prevent="scrollTo('#contact')">Contato</a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+    </nav>
 
     <section id="banner" class="mt-[55px] bg-black flex justify-between px-5 sm:px-20 py-8 overflow-x-hidden">
         <div id="left-banner" class="flex-auto flex flex-col items-start gap-6 pt-2 sm:pt-24 pr-4 w-1/2" data-aos="fade-up">
