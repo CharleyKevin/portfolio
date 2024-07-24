@@ -9,7 +9,7 @@ module.exports = {
       keyframes: {
         pulse: {
           '0%, 100%': { transform: 'scale(1)', opacity: 1 },
-          '50%': { transform: 'scale(1.02)', opacity: 1 },
+          '50%': { transform: 'scale(1.05)', opacity: 1 },
         },
       },
     },

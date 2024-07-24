@@ -65,7 +65,7 @@
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5 animate-bounce">
                         <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 5.25 7.5 7.5 7.5-7.5m-15 6 7.5 7.5 7.5-7.5" />
                     </svg>
-                    <a href="#projects" class="max-sm:font-semibold">Ver projetos</a>
+                    <a href="#projects" class="max-sm:font-semibold" @click.prevent="scrollTo('#projects')">Ver projetos</a>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5 animate-bounce">
                         <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 5.25 7.5 7.5 7.5-7.5m-15 6 7.5 7.5 7.5-7.5" />
                     </svg>
@@ -137,7 +137,7 @@
         </div>
     </section>
 
-    <section id="projects" class="relative bg-black px-5 sm:px-20 py-8 overflow-x-hidden" x-data="slider()">
+    <section id="projects" class="relative bg-black max-sm:pl-5 sm:px-5 sm:px-20 py-8 overflow-x-hidden" x-data="slider()">
         <div id="background-circle-blur-left"
              class="z-0 absolute left-0 -top-2 w-1/4 h-[75%] bg-[#4269F6] rounded-r-full opacity-75 blur-3xl"
              data-aos="fade-left"
@@ -156,20 +156,23 @@
         </div>
         <div id="list-projects" class="relative">
             <div id="carrossel-projects"
-                 class="relative rounded-2xl z-10 flex gap-4 mt-8 overflow-x-scroll scroll-smooth scrollbar-thin scrollbar-thumb-slate-700 scrollbar-track-slate-300 pb-4 text-white"
+                 class="relative rounded-2xl z-10 flex gap-4 mt-8 overflow-x-scroll scroll-smooth scrollbar-thin scrollbar-thumb-slate-700 scrollbar-track-slate-300 pb-4 text-white pr-5"
                  x-ref="container" :class="{'has-no-scrollbar': hideScrollbar}"
                  data-aos="fade-left"
             >
-                <div class="max-sm:min-w-[300px] sm:min-w-[515px] sm:w-[515px] flex flex-col cursor-pointer" @click="modal1 = !modal1">
-                    <h4 class="text-xl text-center font-semibold mb-2">Gerenciamento de campanhas Whatsapp (Twilio)</h4>
-                    <div class="flex justify-center items-center gap-2 mb-2">
+                <div class="max-sm:min-w-96 max-sm:bg-gradient-to-r max-sm:from-[#272323] max-sm:to-[#171A17] max-sm:rounded-2xl sm:min-w-[515px] sm:w-[515px] flex flex-col gap-3 cursor-pointer" @click="modal1 = !modal1">
+                    <h4 class="max-sm:px-5 max-sm:pt-5 text-xl text-center font-semibold mb-2">Gerenciamento de campanhas Whatsapp (Twilio)</h4>
+                    <div class="flex px-5 justify-center items-center gap-2 mb-2">
                         <h6 class="text-xs rounded-full bg-yellow-400 w-fit px-2 text-black">Twilio</h6>
                         <h6 class="text-xs rounded-full bg-yellow-400 w-fit px-2 text-black">PHP</h6>
                         <h6 class="text-xs rounded-full bg-yellow-400 w-fit px-2 text-black">Filament</h6>
                         <h6 class="max-sm:hidden text-xs rounded-full bg-yellow-400 w-fit px-2 text-black">Componentes customizados</h6>
                     </div>
-                    <img src="assets/img/projects/campanhas_whatsapp.png" class="max-sm:w-[300px] max-sm:h-[225px] sm:w-[515px] sm:h-[463px] rounded-2xl shadow">
-                    <button class="mt-2 self-center flex items-center gap-2 h-8 w-8 shadow-lg text-md rounded-full bg-yellow-500 hover:bg-yellow-400 w-fit px-2 mr-2 text-black -translate-y-14">
+                    <div class="max-sm:w-96 max-sm:px-5">
+                        <img src="assets/img/projects/campanhas_whatsapp.png" class="max-sm:w-full sm:w-[515px] sm:h-[463px] rounded-lg shadow">
+                    </div>
+                    <p class="max-sm:px-5 text-sm">Gerenciamento de campanhas de marketing via Whatsapp, com integração de Twilio e Filament.</p>
+                    <button class="px-3 mb-3 self-center flex justify-center items-center gap-2 h-8 shadow-lg rounded-full bg-yellow-500 hover:bg-yellow-400 w-fit text-black">
                         <span class="text-sm">Ver mais</span>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                              stroke="black" class="size-5">
@@ -177,8 +180,8 @@
                         </svg>
                     </button>
                 </div>
-                <div class="max-sm:min-w-[300px] sm:min-w-[515px] sm:w-[515px] flex flex-col cursor-pointer" @click="modal2 = !modal2">
-                    <h4 class="text-xl text-center font-semibold mb-2">Conectando Clientes e Influenciadores</h4>
+                <div class="max-sm:min-w-96 max-sm:bg-gradient-to-r max-sm:from-[#272323] max-sm:to-[#171A17] max-sm:rounded-2xl sm:min-w-[515px] sm:w-[515px] flex flex-col gap-3 cursor-pointer" @click="modal2 = !modal2">
+                    <h4 class="max-sm:px-5 max-sm:pt-5 text-xl text-center font-semibold mb-2">Conectando Clientes e Influenciadores</h4>
                     <div class="flex justify-center gap-2 mb-2">
                         <h6 class="text-xs rounded-full bg-yellow-400 w-fit px-2 text-black">
                             <span class="max-sm:hidden">Frontend - </span>ReactJs
@@ -190,8 +193,11 @@
                             Customização<span class="max-sm:hidden"> em software adquirido</span>
                         </h6>
                     </div>
-                    <img src="assets/img/projects/hollerly.jpeg" class="max-sm:w-[300px] max-sm:h-[225px] sm:w-[515px] sm:h-[463px] rounded-2xl shadow">
-                    <button class="mt-2 self-center flex items-center gap-2 h-8 w-8 shadow-lg text-md rounded-full bg-yellow-500 hover:bg-yellow-400 w-fit px-2 mr-2 text-black -translate-y-14">
+                    <div class="max-sm:w-96 max-sm:px-5">
+                        <img src="assets/img/projects/hollerly.jpeg" class="max-sm:w-full sm:w-[515px] sm:h-[463px] rounded-lg shadow">
+                    </div>
+                    <p class="max-sm:px-5 text-sm">Desenvolvimento de plataforma para conectar clientes e influenciadores, com customização em software adquirido.</p>
+                    <button class="px-3 mb-3 self-center flex justify-center items-center gap-2 h-8 shadow-lg rounded-full bg-yellow-500 hover:bg-yellow-400 w-fit text-black">
                         <span class="text-sm">Ver mais</span>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                              stroke="black" class="size-5">
@@ -199,8 +205,8 @@
                         </svg>
                     </button>
                 </div>
-                <div class="max-sm:min-w-[300px] sm:min-w-[515px] sm:w-[515px] flex flex-col cursor-pointer" @click="modal3 = !modal3">
-                    <h4 class="text-xl text-center font-semibold mb-2">Transformação de Site WordPress com Filament</h4>
+                <div class="max-sm:min-w-96 max-sm:bg-gradient-to-r max-sm:from-[#272323] max-sm:to-[#171A17] max-sm:rounded-2xl sm:min-w-[515px] sm:w-[515px] flex flex-col gap-3 cursor-pointer" @click="modal3 = !modal3">
+                    <h4 class="max-sm:px-5 max-sm:pt-5 text-xl text-center font-semibold mb-2">Transformação de Site WordPress com Filament</h4>
                     <div class="flex justify-center gap-2 mb-2">
                         <h6 class="text-xs rounded-full bg-yellow-400 w-fit px-2 text-black">Tailwind</h6>
                         <h6 class="text-xs rounded-full bg-yellow-400 w-fit px-2 text-black">Filament</h6>
@@ -211,8 +217,11 @@
                             Customização <span class="max-sm:hidden"> em site Wordpress</span>
                         </h6>
                     </div>
-                    <img src="assets/img/projects/grau_academico.jpeg" class="max-sm:w-[300px] max-sm:h-[225px] sm:w-[515px] sm:h-[463px] rounded-2xl shadow">
-                    <button class="mt-2 self-center flex items-center gap-2 h-8 w-8 shadow-lg text-md rounded-full bg-yellow-500 hover:bg-yellow-400 w-fit px-2 mr-2 text-black -translate-y-14">
+                    <div class="max-sm:w-96 max-sm:px-5">
+                        <img src="assets/img/projects/grau_academico.jpeg" class="max-sm:w-full sm:w-[515px] sm:h-[463px] rounded-lg shadow">
+                    </div>
+                    <p class="max-sm:px-5 text-sm">Transformação de site WordPress com Filament, melhorando a experiência do usuário e customizando o site.</p>
+                    <button class="px-3 mb-3 self-center flex justify-center items-center gap-2 h-8 shadow-lg rounded-full bg-yellow-500 hover:bg-yellow-400 w-fit text-black">
                         <span class="text-sm">Ver mais</span>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                              stroke="black" class="size-5">
@@ -220,8 +229,8 @@
                         </svg>
                     </button>
                 </div>
-                <div class="max-sm:min-w-[300px] sm:min-w-[515px] sm:w-[515px] flex flex-col cursor-pointer" @click="modal4 = !modal4">
-                    <h4 class="text-xl text-center font-semibold mb-2">Integração Avançada entre CRM Totvs e Wake</h4>
+                <div class="max-sm:min-w-96 max-sm:bg-gradient-to-r max-sm:from-[#272323] max-sm:to-[#171A17] max-sm:rounded-2xl sm:min-w-[515px] sm:w-[515px] flex flex-col gap-3 cursor-pointer" @click="modal4 = !modal4">
+                    <h4 class="max-sm:px-5 max-sm:pt-5 text-xl text-center font-semibold mb-2">Integração Avançada entre CRM Totvs e Wake</h4>
                     <div class="flex justify-center gap-2 mb-2">
                         <h6 class="text-xs rounded-full bg-yellow-400 w-fit px-2 text-black">
                             Integração<span class="max-sm:hidden"> Totvs com Wake</span>
@@ -232,8 +241,11 @@
                             Automatização<span class="max-sm:hidden"> de Pedidos</span>
                         </h6>
                     </div>
-                    <img src="assets/img/projects/livrosescolares.jpeg" class="max-sm:w-[300px] max-sm:h-[225px] sm:w-[515px] sm:h-[463px] rounded-2xl shadow">
-                    <button class="mt-2 self-center flex items-center gap-2 h-8 w-8 shadow-lg text-md rounded-full bg-yellow-500 hover:bg-yellow-400 w-fit px-2 mr-2 text-black -translate-y-14">
+                    <div class="max-sm:w-96 max-sm:px-5">
+                        <img src="assets/img/projects/livrosescolares.jpeg" class="max-sm:w-full sm:w-[515px] sm:h-[463px] rounded-lg shadow">
+                    </div>
+                    <p class="max-sm:px-5 text-sm">Integração avançada entre CRM Totvs e Wake, com Filament e Laravel, automatizando pedidos e melhorando a eficiência.</p>
+                    <button class="px-3 mb-3 self-center flex justify-center items-center gap-2 h-8 shadow-lg rounded-full bg-yellow-500 hover:bg-yellow-400 w-fit text-black">
                         <span class="text-sm">Ver mais</span>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                              stroke="black" class="size-5">
@@ -242,7 +254,7 @@
                     </button>
                 </div>
             </div>
-            <div class="max-sm:hidden absolute z-10 bottom-1/2 transform -translate-x-1/2 left-0 w-10 h-10 bg-yellow-700 rounded-full
+            <div class="max-sm:left-2 absolute z-10 bottom-1/2 transform -translate-x-1/2 sm:left-0 w-10 h-10 bg-yellow-700 rounded-full
             flex justify-center items-center cursor-pointer hover:bg-yellow-400 hover:text-black" x-cloak @click="prev($refs.container)">
                 <button class="button is-info">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -253,7 +265,7 @@
                 </button>
             </div>
 
-            <div class="max-sm:hidden absolute z-10 bottom-1/2 transform translate-x-1/2 right-0 w-10 h-10 bg-yellow-700 rounded-full
+            <div class="max-sm:right-7 absolute z-10 bottom-1/2 transform translate-x-1/2 sm:right-0 w-10 h-10 bg-yellow-700 rounded-full
             flex justify-center items-center cursor-pointer hover:bg-yellow-400 hover:text-black" x-cloak @click="next($refs.container)">
                 <button class="button is-info">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -450,7 +462,7 @@
          @click.away="modal1 = false" x-cloak
     >
         <div class="w-full h-full flex justify-center items-center">
-            <div class="relative w-3/4 h-5/6 bg-white rounded-2xl p-8 overflow-y-scroll">
+            <div class="relative max-sm:w-11/12 w-3/4 h-5/6 bg-white rounded-2xl p-8 overflow-y-scroll">
                 <button class="sticky max-sm:top-0 sm:top-4 left-[95%] w-8 h-8 bg-black text-white rounded-full flex justify-center items-center"
                         @click="modal1 = !modal1">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -493,7 +505,7 @@
              @click.away="modal2 = false" x-cloak
     >
         <div class="w-full h-full flex justify-center items-center">
-            <div class="relative w-3/4 h-5/6 bg-white rounded-2xl p-8 overflow-y-scroll">
+            <div class="relative max-sm:w-11/12 w-3/4 h-5/6 bg-white rounded-2xl p-8 overflow-y-scroll">
                 <button class="sticky max-sm:top-0 sm:top-4 left-[95%] w-8 h-8 bg-black text-white rounded-full flex justify-center items-center"
                         @click="modal2 = !modal2">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -535,7 +547,7 @@
              @click.away="modal3 = false" x-cloak
     >
         <div class="w-full h-full flex justify-center items-center">
-            <div class="relative w-3/4 h-5/6 bg-white rounded-2xl p-8 overflow-y-scroll">
+            <div class="relative max-sm:w-11/12 w-3/4 h-5/6 bg-white rounded-2xl p-8 overflow-y-scroll">
                 <button class="sticky max-sm:top-0 sm:top-4 left-[95%] w-8 h-8 bg-black text-white rounded-full flex justify-center items-center"
                         @click="modal3 = !modal3">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -577,7 +589,7 @@
              @click.away="modal4 = false" x-cloak
     >
         <div class="w-full h-full flex justify-center items-center">
-            <div class="relative w-3/4 h-5/6 bg-white rounded-2xl p-8 overflow-y-scroll">
+            <div class="relative max-sm:w-11/12 w-3/4 h-5/6 bg-white rounded-2xl p-8 overflow-y-scroll">
                 <button class="sticky max-sm:top-0 sm:top-4 left-[95%] w-8 h-8 bg-black text-white rounded-full flex justify-center items-center"
                         @click="modal4 = !modal4">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
